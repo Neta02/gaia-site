@@ -4,6 +4,7 @@ import {
   AccordionTrigger,
   AccordionContent,
 } from "@/components/ui/accordion";
+import { Reveal } from "@/components/motion/reveal";
 
 const faq: { q: string; r: string }[] = [
   {
@@ -52,14 +53,15 @@ export function Faq() {
       className="scroll-mt-20 border-t border-border"
     >
       <div className="mx-auto max-w-[var(--content-max)] px-[var(--content-gutter)] py-[var(--section-py)]">
-        <h2
-          id="faq-title"
-          className="font-display text-3xl font-semibold tracking-tight sm:text-4xl"
-        >
-          Une question ?
-        </h2>
+        <Reveal>
+          <h2
+            id="faq-title"
+            className="font-display text-3xl font-semibold tracking-tight sm:text-4xl"
+          >
+            Une question ?
+          </h2>
 
-        <Accordion
+          <Accordion
           type="single"
           collapsible
           defaultValue="q1"
@@ -76,6 +78,7 @@ export function Faq() {
             </AccordionItem>
           ))}
         </Accordion>
+        </Reveal>
       </div>
     </section>
   );
