@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useScroll, useMotionValueEvent } from "motion/react";
 import { Menu, X } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -13,9 +14,16 @@ const navLinks = [
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const { scrollY } = useScroll();
+  useMotionValueEvent(scrollY, "change", (y) => setScrolled(y > 8));
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-background">
+    <header
+      className={`sticky top-0 z-50 border-b border-border bg-background transition-shadow duration-200 ${
+        scrolled ? "shadow-sm" : ""
+      }`}
+    >
       <div className="mx-auto flex h-16 max-w-[var(--content-max)] items-center justify-between px-[var(--content-gutter)]">
         <a href="#top" className="text-lg font-semibold tracking-tight">
           GAIA
