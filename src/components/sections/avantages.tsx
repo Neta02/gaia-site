@@ -4,6 +4,7 @@ import {
   CardTitle,
   CardContent,
 } from "@/components/ui/card";
+import { Reveal, Stagger, StaggerItem } from "@/components/motion/reveal";
 
 const cards = [
   {
@@ -24,25 +25,29 @@ export function Avantages() {
   return (
     <section aria-labelledby="avantages-title" className="border-t border-border">
       <div className="mx-auto max-w-[var(--content-max)] px-[var(--content-gutter)] py-[var(--section-py)]">
-        <h2
-          id="avantages-title"
-          className="font-display text-3xl font-semibold tracking-tight sm:text-4xl"
-        >
-          Pourquoi GAIA ?
-        </h2>
+        <Reveal>
+          <h2
+            id="avantages-title"
+            className="font-display text-3xl font-semibold tracking-tight sm:text-4xl"
+          >
+            Pourquoi GAIA ?
+          </h2>
+        </Reveal>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
+        <Stagger className="mt-12 grid gap-6 md:grid-cols-3">
           {cards.map((c) => (
-            <Card key={c.title}>
-              <CardHeader>
-                <CardTitle className="text-lg">{c.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">{c.body}</p>
-              </CardContent>
-            </Card>
+            <StaggerItem key={c.title} className="h-full">
+              <Card className="h-full transition-[transform,box-shadow] duration-200 hover:-translate-y-0.5 hover:shadow-md">
+                <CardHeader>
+                  <CardTitle className="text-lg">{c.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">{c.body}</p>
+                </CardContent>
+              </Card>
+            </StaggerItem>
           ))}
-        </div>
+        </Stagger>
       </div>
     </section>
   );
