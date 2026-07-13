@@ -36,6 +36,8 @@ habitudes par défaut.
   fond bone, texte ink, accent brass. Variables `dark` de shadcn conservées, aucun
   toggle dark (hors scope). Preset `radix-nova`. Typo : Geist Sans (corps + UI),
   Fraunces (`--font-display`) pour H1/H2 uniquement.
+- **Application typo.** Titres H1/H2 = `.font-display` (Fraunces) ; tout le reste
+  en Geist.
 - **Règle brass (impérative, toutes sections).** Le brass échoue le contraste AA
   sur le fond bone (**1,93:1**). Le brass n'est **jamais** utilisé en texte sur
   fond bone : il est réservé aux aplats, bordures et rings, et au texte **sur ink
