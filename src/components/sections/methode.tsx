@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Reveal, Stagger, StaggerItem } from "@/components/motion/reveal";
 
 type Bloc = {
   number: string;
@@ -41,28 +42,36 @@ const blocs: Bloc[] = [
 function MethodeBloc({ bloc, reverse }: { bloc: Bloc; reverse: boolean }) {
   return (
     <div className="grid gap-8 lg:grid-cols-2 lg:items-center lg:gap-12">
-      <div className={reverse ? "lg:order-2" : undefined}>
-        <div className="flex items-center gap-4">
-          <span className="inline-flex size-10 items-center justify-center rounded-lg bg-accent font-semibold text-accent-foreground">
-            {bloc.number}
-          </span>
-          <span className="text-xs font-semibold tracking-wider text-muted-foreground uppercase">
-            {bloc.kicker}
-          </span>
-        </div>
+      <Stagger className={reverse ? "lg:order-2" : undefined}>
+        <StaggerItem>
+          <div className="flex items-center gap-4">
+            <span className="inline-flex size-10 items-center justify-center rounded-lg bg-accent font-semibold text-accent-foreground">
+              {bloc.number}
+            </span>
+            <span className="text-xs font-semibold tracking-wider text-muted-foreground uppercase">
+              {bloc.kicker}
+            </span>
+          </div>
+        </StaggerItem>
 
-        <h3 className="mt-5 text-2xl font-semibold tracking-tight">
-          {bloc.title}
-        </h3>
-        <p className="mt-4 text-muted-foreground">{bloc.body}</p>
+        <StaggerItem className="mt-5">
+          <h3 className="text-2xl font-semibold tracking-tight">{bloc.title}</h3>
+        </StaggerItem>
 
-        <div className="mt-5 border-l-2 border-accent pl-4">
-          <p className="text-sm">
-            <span className="font-semibold">Livrable :</span> {bloc.deliverable}
-          </p>
-        </div>
+        <StaggerItem className="mt-4">
+          <p className="text-muted-foreground">{bloc.body}</p>
+        </StaggerItem>
 
-        <div className="mt-6">
+        <StaggerItem className="mt-5">
+          <div className="border-l-2 border-accent pl-4">
+            <p className="text-sm">
+              <span className="font-semibold">Livrable :</span>{" "}
+              {bloc.deliverable}
+            </p>
+          </div>
+        </StaggerItem>
+
+        <StaggerItem className="mt-6">
           {/* TODO (sous-tâche 7) : câbler le lien de prise de rendez-vous */}
           <Button
             asChild
@@ -71,16 +80,15 @@ function MethodeBloc({ bloc, reverse }: { bloc: Bloc; reverse: boolean }) {
           >
             <a href="#">{bloc.cta}</a>
           </Button>
-        </div>
-      </div>
+        </StaggerItem>
+      </Stagger>
 
-      <div
-        aria-hidden="true"
-        className={
-          "aspect-[4/3] w-full rounded-xl border border-border bg-muted" +
-          (reverse ? " lg:order-1" : "")
-        }
-      />
+      <Reveal fade className={reverse ? "lg:order-1" : undefined}>
+        <div
+          aria-hidden="true"
+          className="aspect-[4/3] w-full rounded-xl border border-border bg-muted"
+        />
+      </Reveal>
     </div>
   );
 }
@@ -93,24 +101,26 @@ export function Methode() {
       className="scroll-mt-20"
     >
       <div className="mx-auto max-w-[var(--content-max)] px-[var(--content-gutter)] py-[var(--section-py)]">
-        <p className="text-xs font-semibold tracking-wider text-muted-foreground uppercase">
-          LA MÉTHODE
-        </p>
-        <h2
-          id="methode-title"
-          className="font-display mt-4 max-w-2xl text-3xl font-semibold tracking-tight sm:text-4xl"
-        >
-          Vos process d&apos;abord, l&apos;IA ensuite.
-        </h2>
-        <p className="mt-6 max-w-3xl text-muted-foreground">
-          L&apos;IA générative ne répare pas un processus flou : elle
-          l&apos;accélère. Selon la RAND Corporation, plus de 80 % des projets
-          d&apos;IA échouent, soit deux fois plus que les projets informatiques
-          classiques, et presque toujours pour des raisons d&apos;organisation
-          plutôt que de technologie. Notre méthode s&apos;attaque à cette cause :
-          une fois vos processus normalisés, ils deviennent automatisables ; une
-          fois automatisés, vos équipes en gardent la maîtrise.
-        </p>
+        <Reveal>
+          <p className="text-xs font-semibold tracking-wider text-muted-foreground uppercase">
+            LA MÉTHODE
+          </p>
+          <h2
+            id="methode-title"
+            className="font-display mt-4 max-w-2xl text-3xl font-semibold tracking-tight sm:text-4xl"
+          >
+            Vos process d&apos;abord, l&apos;IA ensuite.
+          </h2>
+          <p className="mt-6 max-w-3xl text-muted-foreground">
+            L&apos;IA générative ne répare pas un processus flou : elle
+            l&apos;accélère. Selon la RAND Corporation, plus de 80 % des projets
+            d&apos;IA échouent, soit deux fois plus que les projets informatiques
+            classiques, et presque toujours pour des raisons d&apos;organisation
+            plutôt que de technologie. Notre méthode s&apos;attaque à cette cause
+            : une fois vos processus normalisés, ils deviennent automatisables ;
+            une fois automatisés, vos équipes en gardent la maîtrise.
+          </p>
+        </Reveal>
 
         <div className="mt-16 space-y-16">
           {blocs.map((bloc, i) => (
