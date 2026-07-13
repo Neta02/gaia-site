@@ -100,7 +100,7 @@ export function Methode() {
     <section
       id="methode"
       aria-labelledby="methode-title"
-      className="scroll-mt-20"
+      className="scroll-mt-20 border-t border-border"
     >
       <div className="mx-auto max-w-[var(--content-max)] px-[var(--content-gutter)] py-[var(--section-py)]">
         <Reveal>

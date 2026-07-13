@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 
 import { SiteHeader } from "@/components/sections/site-header";
 import { Hero } from "@/components/sections/hero";
-import { MarqueeBand } from "@/components/sections/marquee-band";
 import { Methode } from "@/components/sections/methode";
 import { Avantages } from "@/components/sections/avantages";
 import { Equipe } from "@/components/sections/equipe";
@@ -39,7 +38,6 @@ export default function Home() {
       <SiteHeader />
       <main id="top" className="flex-1">
         <Hero />
-        <MarqueeBand />
         <Methode />
         <Avantages />
         <Equipe />
