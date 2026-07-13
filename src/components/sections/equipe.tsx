@@ -22,9 +22,8 @@ const fondateurs: Fondateur[] = [
     name: "Netaniel Afriat",
     initials: "NA",
     school: "ESSEC Business School",
-    // TODO : remplacer par l'URL vanity LinkedIn de Netaniel Afriat
     linkedin:
-      "https://www.linkedin.com/in/ACoAAGNN5ZABrItTv5ROaJ8H0f_ddk0MayTCNpU",
+      "https://www.linkedin.com/in/n%C3%A9taniel-afriat-09b9aa276",
   },
   {
     name: "Samuel Vrignon",
