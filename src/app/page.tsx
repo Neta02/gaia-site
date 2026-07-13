@@ -8,6 +8,7 @@ import { Avantages } from "@/components/sections/avantages";
 import { Equipe } from "@/components/sections/equipe";
 import { CtaBloc } from "@/components/sections/cta";
 import { Faq } from "@/components/sections/faq";
+import { SiteFooter } from "@/components/sections/site-footer";
 
 export const metadata: Metadata = {
   title: "GAIA | Audit, automatisation et formation IA pour les PME",
@@ -28,6 +29,7 @@ export default function Home() {
         <CtaBloc />
         <Faq />
       </main>
+      <SiteFooter />
     </>
   );
 }
