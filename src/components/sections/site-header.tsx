@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import { useScroll, useMotionValueEvent } from "motion/react";
 import { Menu, X } from "lucide-react";
@@ -26,8 +27,15 @@ export function SiteHeader() {
       }`}
     >
       <div className="mx-auto flex h-16 max-w-[var(--content-max)] items-center justify-between px-[var(--content-gutter)]">
-        <a href="#top" className="text-lg font-semibold tracking-tight">
-          GAIA
+        <a href="#top" className="flex items-center">
+          <Image
+            src="/brand/gaia-logo.png"
+            alt="GAIA"
+            width={938}
+            height={253}
+            priority
+            className="h-7 w-auto"
+          />
         </a>
 
         <nav
