@@ -4,6 +4,7 @@ import { SiteHeader } from "@/components/sections/site-header";
 import { Hero } from "@/components/sections/hero";
 import { MarqueeBand } from "@/components/sections/marquee-band";
 import { Methode } from "@/components/sections/methode";
+import { Avantages } from "@/components/sections/avantages";
 
 export const metadata: Metadata = {
   title: "GAIA | Audit, automatisation et formation IA pour les PME",
@@ -19,6 +20,7 @@ export default function Home() {
         <Hero />
         <MarqueeBand />
         <Methode />
+        <Avantages />
       </main>
     </>
   );
