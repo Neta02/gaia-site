@@ -1,9 +1,13 @@
 import { Button } from "@/components/ui/button";
+import { Reveal } from "@/components/motion/reveal";
 
 export function SiteFooter() {
   return (
     <footer className="border-t border-border bg-background">
-      <div className="mx-auto flex max-w-[var(--content-max)] flex-col gap-8 px-[var(--content-gutter)] py-12 md:flex-row md:items-start md:justify-between">
+      <Reveal
+        fade
+        className="mx-auto flex max-w-[var(--content-max)] flex-col gap-8 px-[var(--content-gutter)] py-12 md:flex-row md:items-start md:justify-between"
+      >
         <p className="text-base font-medium">GAIA, l&apos;IA au service des PME.</p>
 
         <nav
@@ -50,7 +54,7 @@ export function SiteFooter() {
             <a href="#">Réserver votre audit gratuit</a>
           </Button>
         </div>
-      </div>
+      </Reveal>
     </footer>
   );
 }
