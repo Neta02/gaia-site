@@ -1,10 +1,11 @@
 import { Button } from "@/components/ui/button";
+import { Reveal } from "@/components/motion/reveal";
 
 export function CtaBloc() {
   return (
     <section aria-labelledby="cta-title">
       <div className="mx-auto max-w-[var(--content-max)] px-[var(--content-gutter)] py-[var(--section-py)]">
-        <div className="rounded-2xl bg-primary px-6 py-14 text-center text-primary-foreground sm:px-12">
+        <Reveal className="rounded-2xl bg-primary px-6 py-14 text-center text-primary-foreground sm:px-12">
           <h3
             id="cta-title"
             className="mx-auto max-w-2xl text-2xl font-semibold tracking-tight sm:text-3xl"
@@ -26,7 +27,7 @@ export function CtaBloc() {
               <a href="#">Réserver votre audit gratuit</a>
             </Button>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );
