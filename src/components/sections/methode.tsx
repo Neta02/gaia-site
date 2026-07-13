@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/reveal";
+import { CALENDLY_URL, EXTERNAL_LINK } from "@/lib/links";
 
 type Bloc = {
   number: string;
@@ -72,13 +73,14 @@ function MethodeBloc({ bloc, reverse }: { bloc: Bloc; reverse: boolean }) {
         </StaggerItem>
 
         <StaggerItem className="mt-6">
-          {/* TODO (sous-tâche 7) : câbler le lien de prise de rendez-vous */}
           <Button
             asChild
             variant={bloc.primary ? "default" : "outline"}
             className="h-auto py-2 text-left whitespace-normal"
           >
-            <a href="#">{bloc.cta}</a>
+            <a href={CALENDLY_URL} {...EXTERNAL_LINK}>
+              {bloc.cta}
+            </a>
           </Button>
         </StaggerItem>
       </Stagger>

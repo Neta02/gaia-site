@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/reveal";
+import { CALENDLY_URL, EXTERNAL_LINK } from "@/lib/links";
 
 export function Hero() {
   return (
@@ -19,9 +20,10 @@ export function Hero() {
         </StaggerItem>
         <StaggerItem className="mt-8">
           <div className="flex flex-wrap gap-3">
-            {/* TODO (sous-tâche 7) : câbler le lien de prise de rendez-vous */}
             <Button asChild size="lg">
-              <a href="#">Réserver votre audit gratuit</a>
+              <a href={CALENDLY_URL} {...EXTERNAL_LINK}>
+                Réserver votre audit gratuit
+              </a>
             </Button>
             <Button asChild size="lg" variant="outline">
               <a href="#methode">Découvrir la méthode</a>

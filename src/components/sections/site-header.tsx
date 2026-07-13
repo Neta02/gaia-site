@@ -5,6 +5,7 @@ import { useScroll, useMotionValueEvent } from "motion/react";
 import { Menu, X } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { CALENDLY_URL, EXTERNAL_LINK } from "@/lib/links";
 
 const navLinks = [
   { href: "#methode", label: "La méthode" },
@@ -47,9 +48,10 @@ export function SiteHeader() {
           </ul>
 
           <div className="hidden md:block">
-            {/* TODO (sous-tâche 7) : câbler le lien de prise de rendez-vous */}
             <Button asChild>
-              <a href="#">Réserver votre audit gratuit</a>
+              <a href={CALENDLY_URL} {...EXTERNAL_LINK}>
+                Réserver votre audit gratuit
+              </a>
             </Button>
           </div>
 
@@ -82,9 +84,12 @@ export function SiteHeader() {
               </li>
             ))}
             <li className="mt-2">
-              {/* TODO (sous-tâche 7) : câbler le lien de prise de rendez-vous */}
               <Button asChild className="w-full">
-                <a href="#" onClick={() => setOpen(false)}>
+                <a
+                  href={CALENDLY_URL}
+                  {...EXTERNAL_LINK}
+                  onClick={() => setOpen(false)}
+                >
                   Réserver votre audit gratuit
                 </a>
               </Button>

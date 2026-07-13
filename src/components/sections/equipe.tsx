@@ -1,3 +1,5 @@
+import { ExternalLink } from "lucide-react";
+
 import {
   Card,
   CardHeader,
@@ -6,29 +8,43 @@ import {
   CardContent,
 } from "@/components/ui/card";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/reveal";
+import { EXTERNAL_LINK } from "@/lib/links";
 
 type Fondateur = {
   name: string;
   initials: string;
   school: string;
+  linkedin: string;
 };
 
-// Noms, fonction (« Co-fondateur ») et école : fournis. rôle / spécialité /
-// LinkedIn : placeholders à matérialiser, jamais à inventer.
 const fondateurs: Fondateur[] = [
-  { name: "Netaniel Afriat", initials: "NA", school: "ESSEC Business School" },
-  { name: "Samuel Vrignon", initials: "SV", school: "ESCP Business School" },
-  { name: "Aaron Bartin", initials: "AB", school: "HEC Paris" },
-  { name: "Nils Dahan", initials: "ND", school: "Télécom SudParis" },
+  {
+    name: "Netaniel Afriat",
+    initials: "NA",
+    school: "ESSEC Business School",
+    // TODO : remplacer par l'URL vanity LinkedIn de Netaniel Afriat
+    linkedin:
+      "https://www.linkedin.com/in/ACoAAGNN5ZABrItTv5ROaJ8H0f_ddk0MayTCNpU",
+  },
+  {
+    name: "Samuel Vrignon",
+    initials: "SV",
+    school: "ESCP Business School",
+    linkedin: "https://www.linkedin.com/in/samuel-vrignon-escp/",
+  },
+  {
+    name: "Aaron Bartin",
+    initials: "AB",
+    school: "HEC Paris",
+    linkedin: "https://www.linkedin.com/in/aaronbartin/",
+  },
+  {
+    name: "Nils Dahan",
+    initials: "ND",
+    school: "Télécom SudParis",
+    linkedin: "https://www.linkedin.com/in/nilsdahan/",
+  },
 ];
-
-function Placeholder({ children }: { children: React.ReactNode }) {
-  return (
-    <span className="inline-block rounded border border-dashed border-border px-1.5 py-0.5 text-xs text-muted-foreground">
-      {children}
-    </span>
-  );
-}
 
 export function Equipe() {
   return (
@@ -61,26 +77,23 @@ export function Equipe() {
                     </div>
                     <div>
                       <CardTitle className="text-base">{f.name}</CardTitle>
-                      <CardDescription className="mt-1 flex flex-wrap items-center gap-1">
-                        Co-fondateur <Placeholder>[rôle]</Placeholder>
+                      <CardDescription className="mt-1">
+                        Co-fondateur
                       </CardDescription>
                     </div>
                   </div>
                 </CardHeader>
                 <CardContent className="space-y-3 text-sm">
                   <p className="text-muted-foreground">{f.school}</p>
-                  <div>
-                    <Placeholder>[Spécialité]</Placeholder>
-                  </div>
-                  <div>
-                    {/* TODO (sous-tâche 7 / données) : URL LinkedIn réelle à câbler */}
-                    <a
-                      href="#"
-                      className="inline-block rounded border border-dashed border-border px-1.5 py-0.5 text-xs text-muted-foreground underline-offset-2 transition-colors hover:text-foreground"
-                    >
-                      [LinkedIn]
-                    </a>
-                  </div>
+                  <a
+                    href={f.linkedin}
+                    {...EXTERNAL_LINK}
+                    aria-label={`LinkedIn de ${f.name}`}
+                    className="inline-flex items-center gap-1.5 text-muted-foreground transition-colors hover:text-foreground"
+                  >
+                    <ExternalLink className="size-4" aria-hidden="true" />
+                    LinkedIn
+                  </a>
                 </CardContent>
               </Card>
             </StaggerItem>

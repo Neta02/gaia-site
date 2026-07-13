@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/motion/reveal";
+import { CALENDLY_URL, EXTERNAL_LINK } from "@/lib/links";
 
 export function SiteFooter() {
   return (
@@ -32,16 +33,9 @@ export function SiteFooter() {
           >
             FAQ
           </a>
-          {/* TODO (sous-tâche 7 / données) : URL LinkedIn GAIA réelle à câbler */}
+          {/* TODO : lien LinkedIn GAIA à ajouter quand la page entreprise sera créée */}
           <a
-            href="#"
-            className="rounded border border-dashed border-border px-1.5 text-muted-foreground transition-colors hover:text-foreground"
-          >
-            [LinkedIn GAIA]
-          </a>
-          {/* TODO : page Mentions légales à créer et à câbler */}
-          <a
-            href="#"
+            href="/mentions-legales"
             className="text-foreground/80 transition-colors hover:text-foreground"
           >
             Mentions légales
@@ -49,9 +43,10 @@ export function SiteFooter() {
         </nav>
 
         <div>
-          {/* TODO (sous-tâche 7) : câbler le lien de prise de rendez-vous */}
           <Button asChild>
-            <a href="#">Réserver votre audit gratuit</a>
+            <a href={CALENDLY_URL} {...EXTERNAL_LINK}>
+              Réserver votre audit gratuit
+            </a>
           </Button>
         </div>
       </Reveal>

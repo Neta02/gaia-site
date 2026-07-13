@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/motion/reveal";
+import { CALENDLY_URL, EXTERNAL_LINK } from "@/lib/links";
 
 export function CtaBloc() {
   return (
@@ -18,13 +19,14 @@ export function CtaBloc() {
             vous faire gagner du temps.
           </p>
           <div className="mt-8">
-            {/* TODO (sous-tâche 7) : câbler le lien de prise de rendez-vous */}
             <Button
               asChild
               size="lg"
               className="bg-accent text-accent-foreground hover:bg-accent/90"
             >
-              <a href="#">Réserver votre audit gratuit</a>
+              <a href={CALENDLY_URL} {...EXTERNAL_LINK}>
+                Réserver votre audit gratuit
+              </a>
             </Button>
           </div>
         </Reveal>
