@@ -10,7 +10,7 @@ const items = [
 export function MarqueeBand() {
   return (
     <section className="bg-primary text-primary-foreground">
-      <Marquee className="py-4 [--duration:32s]">
+      <Marquee pauseOnHover className="py-4 [--duration:32s]">
         {items.map((t) => (
           <span
             key={t}
