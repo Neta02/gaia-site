@@ -20,3 +20,24 @@ habitudes par défaut.
   moi exclusivement. Ne jamais inventer de contenu éditorial.
 - **(f) Jamais de push sans accord.** Ne jamais faire de `git push` sans mon accord
   explicite. Les commits locaux sont autorisés dans le cadre d'une sous-tâche.
+
+## Outillage
+
+- **MCP Playwright = msedge headless sur ce poste.** Le `chrome.exe` headful de
+  Chrome-for-Testing ne démarre pas ici (échec d'activation SxS de son assembly
+  privé versionné ; non réparable sans droits admin). `.mcp.json` est donc réglé
+  sur `--browser msedge --headless` (Edge = moteur Chromium, rendu fidèle). **Sur
+  un poste sain, revenir à `--browser chromium`.** Tout changement de `.mcp.json`
+  ne prend effet qu'après reconnexion du serveur MCP.
+
+## Design
+
+- **Palette Sovereign :** ink `#10151C`, bone `#ECE6D8`, brass `#C8A24B`. Light =
+  fond bone, texte ink, accent brass. Variables `dark` de shadcn conservées, aucun
+  toggle dark (hors scope). Preset `radix-nova`. Typo : Geist Sans (corps + UI),
+  Fraunces (`--font-display`) pour H1/H2 uniquement.
+- **Règle brass (impérative, toutes sections).** Le brass échoue le contraste AA
+  sur le fond bone (**1,93:1**). Le brass n'est **jamais** utilisé en texte sur
+  fond bone : il est réservé aux aplats, bordures et rings, et au texte **sur ink
+  uniquement** (`accent-foreground = ink`, 7,61:1). Vérifier les contrastes au
+  script et signaler tout échec plutôt que d'assombrir la palette.
