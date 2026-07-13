@@ -1,10 +1,14 @@
 "use client";
 
 import * as React from "react";
-import { motion, useReducedMotion, type Variants } from "motion/react";
+import { motion, type Variants } from "motion/react";
 
 // ─── Vocabulaire d'animation UNIQUE (défini ici, réutilisé partout) ───
 // opacité + translation Y légère, easeOut, reveal une seule fois.
+// prefers-reduced-motion est géré globalement par <MotionConfig reducedMotion="user">
+// (voir motion-provider) : les transforms sont désactivés, l'opacité reste.
+// On ne branche PAS sur useReducedMotion ici : cela produirait un arbre
+// serveur/client divergent et donc un mismatch d'hydratation.
 const DISTANCE = 20; // px de translation Y (dans 16–24)
 const DURATION = 0.6; // s (dans 0.5–0.7)
 const EASE = "easeOut" as const;
@@ -55,8 +59,6 @@ export function Reveal({
   on = "scroll",
   amount = AMOUNT,
 }: RevealProps) {
-  const reduce = useReducedMotion();
-  if (reduce) return <div className={className}>{children}</div>;
   return (
     <motion.div
       className={className}
@@ -75,8 +77,6 @@ export function Stagger({
   on = "scroll",
   amount = AMOUNT,
 }: RevealProps) {
-  const reduce = useReducedMotion();
-  if (reduce) return <div className={className}>{children}</div>;
   return (
     <motion.div
       className={className}
@@ -90,8 +90,6 @@ export function Stagger({
 
 /** Enfant d'un <Stagger> (hérite du déclenchement du conteneur). */
 export function StaggerItem({ children, className, fade = false }: RevealProps) {
-  const reduce = useReducedMotion();
-  if (reduce) return <div className={className}>{children}</div>;
   return (
     <motion.div
       className={className}
