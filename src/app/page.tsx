@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import { SiteHeader } from "@/components/sections/site-header";
+import { Hero } from "@/components/sections/hero";
 
 export const metadata: Metadata = {
   title: "GAIA | Audit, automatisation et formation IA pour les PME",
@@ -13,7 +14,7 @@ export default function Home() {
     <>
       <SiteHeader />
       <main id="top" className="flex-1">
-        {/* Sections ajoutées au fil des commits (sous-tâche 5) */}
+        <Hero />
       </main>
     </>
   );
