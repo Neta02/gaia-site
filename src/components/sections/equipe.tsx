@@ -5,6 +5,7 @@ import {
   CardDescription,
   CardContent,
 } from "@/components/ui/card";
+import { Reveal, Stagger, StaggerItem } from "@/components/motion/reveal";
 
 type Fondateur = {
   name: string;
@@ -37,50 +38,54 @@ export function Equipe() {
       className="scroll-mt-20 border-t border-border"
     >
       <div className="mx-auto max-w-[var(--content-max)] px-[var(--content-gutter)] py-[var(--section-py)]">
-        <h2
-          id="equipe-title"
-          className="font-display text-3xl font-semibold tracking-tight sm:text-4xl"
-        >
-          Quatre fondateurs, une méthode.
-        </h2>
+        <Reveal>
+          <h2
+            id="equipe-title"
+            className="font-display text-3xl font-semibold tracking-tight sm:text-4xl"
+          >
+            Quatre fondateurs, une méthode.
+          </h2>
+        </Reveal>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <Stagger className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {fondateurs.map((f) => (
-            <Card key={f.name}>
-              <CardHeader>
-                <div className="flex items-center gap-3">
-                  <div
-                    aria-hidden="true"
-                    className="flex size-12 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-semibold text-primary-foreground"
-                  >
-                    {f.initials}
+            <StaggerItem key={f.name} className="h-full">
+              <Card className="h-full transition-[transform,box-shadow] duration-200 hover:-translate-y-0.5 hover:shadow-md">
+                <CardHeader>
+                  <div className="flex items-center gap-3">
+                    <div
+                      aria-hidden="true"
+                      className="flex size-12 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-semibold text-primary-foreground"
+                    >
+                      {f.initials}
+                    </div>
+                    <div>
+                      <CardTitle className="text-base">{f.name}</CardTitle>
+                      <CardDescription className="mt-1 flex flex-wrap items-center gap-1">
+                        Co-fondateur <Placeholder>[rôle]</Placeholder>
+                      </CardDescription>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent className="space-y-3 text-sm">
+                  <p className="text-muted-foreground">{f.school}</p>
+                  <div>
+                    <Placeholder>[Spécialité]</Placeholder>
                   </div>
                   <div>
-                    <CardTitle className="text-base">{f.name}</CardTitle>
-                    <CardDescription className="mt-1 flex flex-wrap items-center gap-1">
-                      Co-fondateur <Placeholder>[rôle]</Placeholder>
-                    </CardDescription>
+                    {/* TODO (sous-tâche 7 / données) : URL LinkedIn réelle à câbler */}
+                    <a
+                      href="#"
+                      className="inline-block rounded border border-dashed border-border px-1.5 py-0.5 text-xs text-muted-foreground underline-offset-2 transition-colors hover:text-foreground"
+                    >
+                      [LinkedIn]
+                    </a>
                   </div>
-                </div>
-              </CardHeader>
-              <CardContent className="space-y-3 text-sm">
-                <p className="text-muted-foreground">{f.school}</p>
-                <div>
-                  <Placeholder>[Spécialité]</Placeholder>
-                </div>
-                <div>
-                  {/* TODO (sous-tâche 7 / données) : URL LinkedIn réelle à câbler */}
-                  <a
-                    href="#"
-                    className="inline-block rounded border border-dashed border-border px-1.5 py-0.5 text-xs text-muted-foreground underline-offset-2 transition-colors hover:text-foreground"
-                  >
-                    [LinkedIn]
-                  </a>
-                </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            </StaggerItem>
           ))}
-        </div>
+        </Stagger>
       </div>
     </section>
   );
