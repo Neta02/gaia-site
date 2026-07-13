@@ -30,14 +30,14 @@ export default function MentionsLegales() {
             </h2>
             <p className="mt-3">
               Le présent site est édité par Top Trois Formation, société par
-              actions simplifiée (SAS) au capital de [CAPITAL SOCIAL] euros,
+              actions simplifiée (SAS) au capital de 1000 euros,
               immatriculée au RCS de Paris sous le numéro 939 177 606, dont le
               siège social est situé 58 rue La Fayette, 75009 Paris, France.
             </p>
             <p className="mt-3">
               Directeur de la publication : Samuel Vrignon.
             </p>
-            <p className="mt-3">Contact : [EMAIL DE CONTACT]</p>
+            <p className="mt-3">Contact : toptrois.formation@gmail.com</p>
           </section>
 
           <section>
@@ -72,7 +72,7 @@ export default function MentionsLegales() {
               Calendly, dont le traitement des données est régi par sa propre
               politique de confidentialité.
             </p>
-            <p className="mt-3">Pour toute question : [EMAIL DE CONTACT]</p>
+            <p className="mt-3">Pour toute question : toptrois.formation@gmail.com</p>
           </section>
         </div>
       </div>
