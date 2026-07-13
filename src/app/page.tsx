@@ -10,10 +10,27 @@ import { CtaBloc } from "@/components/sections/cta";
 import { Faq } from "@/components/sections/faq";
 import { SiteFooter } from "@/components/sections/site-footer";
 
+const title = "GAIA | Audit, automatisation et formation IA pour les PME";
+const description =
+  "GAIA normalise vos processus, les automatise avec des outils sur mesure et forme vos équipes. Audit gratuit de deux heures, premier agent en production en six semaines.";
+
 export const metadata: Metadata = {
-  title: "GAIA | Audit, automatisation et formation IA pour les PME",
-  description:
-    "GAIA normalise vos processus, les automatise avec des outils sur mesure et forme vos équipes. Audit gratuit de deux heures, premier agent en production en six semaines.",
+  title,
+  description,
+  alternates: { canonical: "/" },
+  openGraph: {
+    title,
+    description,
+    url: "/",
+    siteName: "GAIA",
+    locale: "fr_FR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+  },
 };
 
 export default function Home() {
