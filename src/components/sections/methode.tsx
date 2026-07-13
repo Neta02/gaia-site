@@ -1,6 +1,9 @@
+import Image from "next/image";
+
 import { Button } from "@/components/ui/button";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/reveal";
 import { CALENDLY_URL, EXTERNAL_LINK } from "@/lib/links";
+import { publicAsset } from "@/lib/assets";
 
 type Bloc = {
   number: string;
@@ -41,6 +44,8 @@ const blocs: Bloc[] = [
 ];
 
 function MethodeBloc({ bloc, reverse }: { bloc: Bloc; reverse: boolean }) {
+  const illustration = publicAsset(`illustrations/methode-${bloc.number}.svg`);
+
   return (
     <div className="grid gap-8 lg:grid-cols-2 lg:items-center lg:gap-12">
       <Stagger className={reverse ? "lg:order-2" : undefined}>
@@ -86,10 +91,23 @@ function MethodeBloc({ bloc, reverse }: { bloc: Bloc; reverse: boolean }) {
       </Stagger>
 
       <Reveal fade className={reverse ? "lg:order-1" : undefined}>
-        <div
-          aria-hidden="true"
-          className="aspect-[4/3] w-full rounded-xl border border-border bg-muted"
-        />
+        {illustration ? (
+          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl border border-border">
+            <Image
+              src={illustration}
+              alt=""
+              aria-hidden="true"
+              fill
+              unoptimized
+              className="object-cover"
+            />
+          </div>
+        ) : (
+          <div
+            aria-hidden="true"
+            className="aspect-[4/3] w-full rounded-xl border border-border bg-muted"
+          />
+        )}
       </Reveal>
     </div>
   );

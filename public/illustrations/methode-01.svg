@@ -1,0 +1,200 @@
+<svg width="1600" height="1200" viewBox="0 0 1600 1200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="24" flood-color="#10151C" flood-opacity="0.12"/>
+    </filter>
+    <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="14" cy="14" r="1.4" fill="#10151C" fill-opacity="0.10"/>
+    </pattern>
+  </defs>
+
+  <!-- fond -->
+  <rect width="1600" height="1200" fill="#ECE6D8"/>
+
+  <!-- connecteur externe (sous les fenetres) -->
+  <path d="M310,988 C 360,988 380,1010 390,1030" stroke="#10151C" stroke-opacity="0.30" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-dasharray="1 9"/>
+
+  <!-- carte fantome (profondeur) -->
+  <rect x="178" y="206" width="1300" height="860" rx="20" fill="#10151C" fill-opacity="0.05"/>
+
+  <!-- ===== FENETRE PRINCIPALE : outil de cartographie ===== -->
+  <g filter="url(#shadow)">
+    <rect x="150" y="170" width="1300" height="860" rx="20" fill="#F7F3EA" stroke="#10151C" stroke-opacity="0.14" stroke-width="1.5"/>
+  </g>
+  <line x1="150" y1="226" x2="1450" y2="226" stroke="#10151C" stroke-opacity="0.08" stroke-width="1.5"/>
+  <circle cx="202" cy="198" r="7" fill="#10151C" fill-opacity="0.16"/>
+  <circle cx="226" cy="198" r="7" fill="#10151C" fill-opacity="0.16"/>
+  <circle cx="250" cy="198" r="7" fill="#10151C" fill-opacity="0.16"/>
+  <rect x="290" y="191" width="150" height="14" rx="5" fill="#10151C" fill-opacity="0.12"/>
+  <circle cx="1370" cy="198" r="12" stroke="#10151C" stroke-opacity="0.25" stroke-width="2" fill="none"/>
+  <path d="M1363,198 H1377" stroke="#10151C" stroke-opacity="0.35" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="1404" cy="198" r="12" stroke="#10151C" stroke-opacity="0.25" stroke-width="2" fill="none"/>
+  <path d="M1397,198 H1411 M1404,191 V205" stroke="#10151C" stroke-opacity="0.35" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- rail d'outils -->
+  <line x1="214" y1="226" x2="214" y2="1030" stroke="#10151C" stroke-opacity="0.08" stroke-width="1.5"/>
+  <rect x="150" y="268" width="5" height="34" rx="2.5" fill="#C8A24B"/>
+  <g stroke="#10151C" fill="none" stroke-width="2.5">
+    <rect x="166" y="266" width="32" height="32" rx="8" stroke-opacity="0.55"/>
+    <path d="M176,274 L190,281 L183,284 L180,291 Z" stroke-opacity="0.55" stroke-linejoin="round"/>
+    <rect x="166" y="326" width="32" height="32" rx="8" stroke-opacity="0.30"/>
+    <rect x="174" y="336" width="16" height="13" rx="3" stroke-opacity="0.30"/>
+    <rect x="166" y="386" width="32" height="32" rx="8" stroke-opacity="0.30"/>
+    <circle cx="175" cy="408" r="3.5" stroke-opacity="0.30"/>
+    <circle cx="189" cy="396" r="3.5" stroke-opacity="0.30"/>
+    <path d="M178,405 L186,399" stroke-opacity="0.30"/>
+    <rect x="166" y="446" width="32" height="32" rx="8" stroke-opacity="0.30"/>
+    <path d="M172,468 l6,-8 l6,6 l8,-10" stroke-opacity="0.30" stroke-linejoin="round"/>
+  </g>
+
+  <!-- grille de points du canvas -->
+  <rect x="214" y="226" width="966" height="804" fill="url(#dots)"/>
+
+  <!-- panneau lateral : checklist d'audit -->
+  <line x1="1180" y1="226" x2="1180" y2="1030" stroke="#10151C" stroke-opacity="0.08" stroke-width="1.5"/>
+  <rect x="1210" y="270" width="140" height="14" rx="5" fill="#10151C" fill-opacity="0.30"/>
+  <rect x="1210" y="294" width="90" height="9" rx="4" fill="#10151C" fill-opacity="0.12"/>
+
+  <rect x="1210" y="340" width="24" height="24" rx="7" fill="#C8A24B"/>
+  <path d="M1216,352 L1221,357 L1230,346" stroke="#F7F3EA" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="1250" y="342" width="130" height="12" rx="4" fill="#10151C" fill-opacity="0.22"/>
+  <rect x="1250" y="360" width="88" height="8" rx="4" fill="#10151C" fill-opacity="0.11"/>
+
+  <rect x="1210" y="410" width="24" height="24" rx="7" fill="#C8A24B"/>
+  <path d="M1216,422 L1221,427 L1230,416" stroke="#F7F3EA" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="1250" y="412" width="112" height="12" rx="4" fill="#10151C" fill-opacity="0.22"/>
+  <rect x="1250" y="430" width="96" height="8" rx="4" fill="#10151C" fill-opacity="0.11"/>
+
+  <rect x="1210" y="480" width="24" height="24" rx="7" fill="#C8A24B"/>
+  <path d="M1216,492 L1221,497 L1230,486" stroke="#F7F3EA" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="1250" y="482" width="138" height="12" rx="4" fill="#10151C" fill-opacity="0.22"/>
+  <rect x="1250" y="500" width="76" height="8" rx="4" fill="#10151C" fill-opacity="0.11"/>
+
+  <rect x="1210" y="550" width="24" height="24" rx="7" fill="#C8A24B" fill-opacity="0.12" stroke="#C8A24B" stroke-width="2.5"/>
+  <rect x="1250" y="552" width="120" height="12" rx="4" fill="#10151C" fill-opacity="0.22"/>
+  <rect x="1250" y="570" width="90" height="8" rx="4" fill="#10151C" fill-opacity="0.11"/>
+
+  <rect x="1210" y="620" width="24" height="24" rx="7" stroke="#10151C" stroke-opacity="0.25" stroke-width="2.5" fill="none"/>
+  <rect x="1250" y="622" width="104" height="12" rx="4" fill="#10151C" fill-opacity="0.15"/>
+  <rect x="1250" y="640" width="70" height="8" rx="4" fill="#10151C" fill-opacity="0.09"/>
+
+  <rect x="1204" y="920" width="222" height="76" rx="12" fill="#FBF8F0" stroke="#10151C" stroke-opacity="0.10" stroke-width="1.5"/>
+  <rect x="1224" y="944" width="80" height="8" rx="4" fill="#10151C" fill-opacity="0.15"/>
+  <rect x="1224" y="966" width="182" height="8" rx="4" fill="#10151C" fill-opacity="0.08"/>
+  <rect x="1224" y="966" width="110" height="8" rx="4" fill="#C8A24B"/>
+
+  <!-- ===== ZONE GAUCHE : processus en desordre ===== -->
+  <g stroke="#10151C" stroke-opacity="0.25" stroke-width="2" fill="none">
+    <path d="M430,330 C 470,380 510,470 555,540"/>
+    <path d="M535,330 C 490,390 440,470 400,530"/>
+    <path d="M400,530 C 430,545 450,550 480,560"/>
+    <path d="M630,570 C 655,585 675,595 690,610" stroke-dasharray="5 6"/>
+    <path d="M395,700 C 405,680 415,655 428,632" stroke-dasharray="5 6"/>
+  </g>
+  <circle cx="690" cy="610" r="4.5" stroke="#10151C" stroke-opacity="0.30" stroke-width="2" fill="none"/>
+  <circle cx="430" cy="630" r="4.5" stroke="#10151C" stroke-opacity="0.30" stroke-width="2" fill="none"/>
+
+  <g>
+    <rect x="280" y="300" width="150" height="60" rx="10" fill="#FBF8F0" stroke="#10151C" stroke-opacity="0.14" stroke-width="1.5"/>
+    <circle cx="304" cy="330" r="7" stroke="#10151C" stroke-opacity="0.30" stroke-width="2" fill="none"/>
+    <rect x="322" y="316" width="90" height="10" rx="4" fill="#10151C" fill-opacity="0.22"/>
+    <rect x="322" y="334" width="64" height="7" rx="3" fill="#10151C" fill-opacity="0.11"/>
+
+    <rect x="460" y="270" width="150" height="60" rx="10" fill="#FBF8F0" stroke="#10151C" stroke-opacity="0.14" stroke-width="1.5"/>
+    <circle cx="484" cy="300" r="7" stroke="#10151C" stroke-opacity="0.30" stroke-width="2" fill="none"/>
+    <rect x="502" y="286" width="82" height="10" rx="4" fill="#10151C" fill-opacity="0.22"/>
+    <rect x="502" y="304" width="58" height="7" rx="3" fill="#10151C" fill-opacity="0.11"/>
+
+    <rect x="250" y="500" width="150" height="60" rx="10" fill="#FBF8F0" stroke="#10151C" stroke-opacity="0.14" stroke-width="1.5"/>
+    <circle cx="274" cy="530" r="7" stroke="#10151C" stroke-opacity="0.30" stroke-width="2" fill="none"/>
+    <rect x="292" y="516" width="88" height="10" rx="4" fill="#10151C" fill-opacity="0.22"/>
+    <rect x="292" y="534" width="52" height="7" rx="3" fill="#10151C" fill-opacity="0.11"/>
+
+    <rect x="480" y="540" width="150" height="60" rx="10" fill="#FBF8F0" stroke="#10151C" stroke-opacity="0.14" stroke-width="1.5"/>
+    <circle cx="504" cy="570" r="7" stroke="#10151C" stroke-opacity="0.30" stroke-width="2" fill="none"/>
+    <rect x="522" y="556" width="76" height="10" rx="4" fill="#10151C" fill-opacity="0.22"/>
+    <rect x="522" y="574" width="60" height="7" rx="3" fill="#10151C" fill-opacity="0.11"/>
+
+    <rect x="320" y="700" width="150" height="60" rx="10" fill="#FBF8F0" stroke="#10151C" stroke-opacity="0.14" stroke-width="1.5"/>
+    <circle cx="344" cy="730" r="7" stroke="#10151C" stroke-opacity="0.30" stroke-width="2" fill="none"/>
+    <rect x="362" y="716" width="84" height="10" rx="4" fill="#10151C" fill-opacity="0.22"/>
+    <rect x="362" y="734" width="66" height="7" rx="3" fill="#10151C" fill-opacity="0.11"/>
+  </g>
+
+  <!-- ===== ZONE DROITE : flux normalise ===== -->
+  <g stroke="#10151C" stroke-opacity="0.30" stroke-width="2.5" fill="none">
+    <path d="M880,360 H950"/>
+    <path d="M805,390 V560"/>
+    <path d="M1025,390 V560"/>
+    <path d="M880,590 H950"/>
+    <path d="M1100,590 H1140"/>
+  </g>
+  <path d="M1025,620 V760" stroke="#10151C" stroke-opacity="0.28" stroke-width="2.5" fill="none" stroke-dasharray="6 7"/>
+  <path d="M690,445 C 710,430 716,392 730,362" stroke="#10151C" stroke-opacity="0.35" stroke-width="2.5" fill="none" stroke-dasharray="6 7"/>
+
+  <g>
+    <rect x="730" y="330" width="150" height="60" rx="10" fill="#FBF8F0" stroke="#10151C" stroke-opacity="0.14" stroke-width="1.5"/>
+    <circle cx="754" cy="360" r="7" stroke="#10151C" stroke-opacity="0.30" stroke-width="2" fill="none"/>
+    <rect x="772" y="346" width="86" height="10" rx="4" fill="#10151C" fill-opacity="0.22"/>
+    <rect x="772" y="364" width="60" height="7" rx="3" fill="#10151C" fill-opacity="0.11"/>
+
+    <rect x="950" y="330" width="150" height="60" rx="10" fill="#FBF8F0" stroke="#10151C" stroke-opacity="0.14" stroke-width="1.5"/>
+    <circle cx="974" cy="360" r="7" stroke="#10151C" stroke-opacity="0.30" stroke-width="2" fill="none"/>
+    <rect x="992" y="346" width="80" height="10" rx="4" fill="#10151C" fill-opacity="0.22"/>
+    <rect x="992" y="364" width="56" height="7" rx="3" fill="#10151C" fill-opacity="0.11"/>
+
+    <rect x="730" y="560" width="150" height="60" rx="10" fill="#FBF8F0" stroke="#10151C" stroke-opacity="0.14" stroke-width="1.5"/>
+    <circle cx="754" cy="590" r="7" stroke="#10151C" stroke-opacity="0.30" stroke-width="2" fill="none"/>
+    <rect x="772" y="576" width="78" height="10" rx="4" fill="#10151C" fill-opacity="0.22"/>
+    <rect x="772" y="594" width="64" height="7" rx="3" fill="#10151C" fill-opacity="0.11"/>
+
+    <rect x="950" y="560" width="150" height="60" rx="10" fill="#FBF8F0" stroke="#10151C" stroke-opacity="0.14" stroke-width="1.5"/>
+    <circle cx="974" cy="590" r="7" stroke="#10151C" stroke-opacity="0.30" stroke-width="2" fill="none"/>
+    <rect x="992" y="576" width="90" height="10" rx="4" fill="#10151C" fill-opacity="0.22"/>
+    <rect x="992" y="594" width="52" height="7" rx="3" fill="#10151C" fill-opacity="0.11"/>
+  </g>
+
+  <!-- emplacement cible en attente -->
+  <rect x="950" y="760" width="150" height="60" rx="10" stroke="#10151C" stroke-opacity="0.28" stroke-width="2" fill="none" stroke-dasharray="7 7"/>
+
+  <!-- noeuds laiton du flux propre -->
+  <g fill="#C8A24B" stroke="#F7F3EA" stroke-width="3">
+    <circle cx="915" cy="360" r="6"/>
+    <circle cx="805" cy="475" r="6"/>
+    <circle cx="1025" cy="475" r="6"/>
+    <circle cx="915" cy="590" r="6"/>
+    <circle cx="1148" cy="590" r="7"/>
+  </g>
+
+  <!-- ===== NOEUD EN COURS DE RANGEMENT (selection) ===== -->
+  <path d="M470,730 C 520,700 500,520 540,452" stroke="#10151C" stroke-opacity="0.35" stroke-width="2.5" fill="none" stroke-dasharray="6 7"/>
+  <path d="M540,450 l-11,3 M540,450 l-3,11" stroke="#10151C" stroke-opacity="0.35" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <rect x="540" y="415" width="150" height="60" rx="10" fill="#FBF8F0" stroke="#10151C" stroke-opacity="0.18" stroke-width="1.5"/>
+  <circle cx="564" cy="445" r="7" stroke="#10151C" stroke-opacity="0.35" stroke-width="2" fill="none"/>
+  <rect x="582" y="431" width="84" height="10" rx="4" fill="#10151C" fill-opacity="0.24"/>
+  <rect x="582" y="449" width="58" height="7" rx="3" fill="#10151C" fill-opacity="0.12"/>
+
+  <rect x="529" y="404" width="172" height="82" rx="12" stroke="#C8A24B" stroke-width="2.5" fill="none" stroke-dasharray="7 7"/>
+  <g fill="#F7F3EA" stroke="#C8A24B" stroke-width="2.5">
+    <rect x="524" y="399" width="10" height="10"/>
+    <rect x="696" y="399" width="10" height="10"/>
+    <rect x="524" y="481" width="10" height="10"/>
+    <rect x="696" y="481" width="10" height="10"/>
+  </g>
+
+  <!-- puce satellite : avancement -->
+  <g filter="url(#shadow)">
+    <rect x="96" y="956" width="214" height="64" rx="16" fill="#F7F3EA" stroke="#10151C" stroke-opacity="0.14" stroke-width="1.5"/>
+  </g>
+  <circle cx="134" cy="988" r="13" fill="#C8A24B"/>
+  <path d="M127,988 L132,993 L142,983" stroke="#F7F3EA" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="158" y="976" width="120" height="12" rx="4" fill="#10151C" fill-opacity="0.25"/>
+  <rect x="158" y="996" width="80" height="8" rx="4" fill="#10151C" fill-opacity="0.12"/>
+
+  <!-- noeuds du connecteur externe -->
+  <g fill="#C8A24B" stroke="#ECE6D8" stroke-width="3">
+    <circle cx="310" cy="988" r="7"/>
+    <circle cx="390" cy="1030" r="7"/>
+  </g>
+</svg>

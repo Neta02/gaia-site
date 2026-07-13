@@ -1,8 +1,13 @@
+import Image from "next/image";
+
 import { Button } from "@/components/ui/button";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/reveal";
 import { CALENDLY_URL, EXTERNAL_LINK } from "@/lib/links";
+import { publicAsset } from "@/lib/assets";
 
 export function Hero() {
+  const illustration = publicAsset("illustrations/hero.svg");
+
   return (
     <section className="mx-auto grid max-w-[var(--content-max)] gap-10 px-[var(--content-gutter)] py-20 lg:grid-cols-2 lg:items-center lg:py-28">
       <Stagger on="load">
@@ -33,10 +38,24 @@ export function Hero() {
       </Stagger>
 
       <Reveal fade on="load">
-        <div
-          aria-hidden="true"
-          className="aspect-[4/3] w-full rounded-xl border border-border bg-muted"
-        />
+        {illustration ? (
+          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl border border-border">
+            <Image
+              src={illustration}
+              alt=""
+              aria-hidden="true"
+              fill
+              priority
+              unoptimized
+              className="object-cover"
+            />
+          </div>
+        ) : (
+          <div
+            aria-hidden="true"
+            className="aspect-[4/3] w-full rounded-xl border border-border bg-muted"
+          />
+        )}
       </Reveal>
     </section>
   );

@@ -1,0 +1,138 @@
+<svg width="1600" height="1200" viewBox="0 0 1600 1200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="24" flood-color="#10151C" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- fond -->
+  <rect width="1600" height="1200" fill="#ECE6D8"/>
+
+  <!-- liaisons entre les deux fenetres -->
+  <path d="M640,420 C 690,420 690,400 740,398" stroke="#10151C" stroke-opacity="0.35" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M640,540 C 690,540 690,520 740,516" stroke="#C8A24B" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  <path d="M640,660 C 690,660 690,636 740,634" stroke="#10151C" stroke-opacity="0.30" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-dasharray="1 9"/>
+
+  <!-- ===== FENETRE EXTERNE (grisee, se desactive, sans ombre) ===== -->
+  <rect x="120" y="300" width="520" height="500" rx="20" fill="#F7F3EA" stroke="#10151C" stroke-opacity="0.12" stroke-width="1.5"/>
+  <line x1="120" y1="352" x2="640" y2="352" stroke="#10151C" stroke-opacity="0.06" stroke-width="1.5"/>
+  <circle cx="152" cy="326" r="6" fill="#10151C" fill-opacity="0.12"/>
+  <circle cx="176" cy="326" r="6" fill="#10151C" fill-opacity="0.12"/>
+  <circle cx="200" cy="326" r="6" fill="#10151C" fill-opacity="0.12"/>
+  <rect x="230" y="320" width="110" height="12" rx="5" fill="#10151C" fill-opacity="0.09"/>
+
+  <rect x="160" y="384" width="180" height="14" rx="5" fill="#10151C" fill-opacity="0.18"/>
+  <rect x="160" y="408" width="110" height="8" rx="4" fill="#10151C" fill-opacity="0.08"/>
+
+  <rect x="176" y="452" width="28" height="28" rx="8" stroke="#10151C" stroke-opacity="0.18" stroke-width="2.5" fill="none"/>
+  <path d="M183,466 H197" stroke="#10151C" stroke-opacity="0.18" stroke-width="2.5" stroke-linecap="round"/>
+  <rect x="220" y="456" width="190" height="12" rx="4" fill="#10151C" fill-opacity="0.14"/>
+  <rect x="220" y="476" width="120" height="8" rx="4" fill="#10151C" fill-opacity="0.07"/>
+  <rect x="520" y="453" width="52" height="26" rx="13" fill="#10151C" fill-opacity="0.10"/>
+  <circle cx="533" cy="466" r="10" fill="#F7F3EA" stroke="#10151C" stroke-opacity="0.15" stroke-width="1.5"/>
+
+  <rect x="176" y="516" width="28" height="28" rx="8" stroke="#10151C" stroke-opacity="0.18" stroke-width="2.5" fill="none"/>
+  <circle cx="190" cy="530" r="4" stroke="#10151C" stroke-opacity="0.18" stroke-width="2.5" fill="none"/>
+  <rect x="220" y="520" width="160" height="12" rx="4" fill="#10151C" fill-opacity="0.14"/>
+  <rect x="220" y="540" width="100" height="8" rx="4" fill="#10151C" fill-opacity="0.07"/>
+  <rect x="520" y="517" width="52" height="26" rx="13" fill="#10151C" fill-opacity="0.10"/>
+  <circle cx="533" cy="530" r="10" fill="#F7F3EA" stroke="#10151C" stroke-opacity="0.15" stroke-width="1.5"/>
+
+  <rect x="176" y="580" width="28" height="28" rx="8" stroke="#10151C" stroke-opacity="0.18" stroke-width="2.5" fill="none"/>
+  <path d="M182,600 l6,-8 l5,4 l6,-9" stroke="#10151C" stroke-opacity="0.18" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
+  <rect x="220" y="584" width="175" height="12" rx="4" fill="#10151C" fill-opacity="0.14"/>
+  <rect x="220" y="604" width="130" height="8" rx="4" fill="#10151C" fill-opacity="0.07"/>
+  <rect x="520" y="581" width="52" height="26" rx="13" fill="#10151C" fill-opacity="0.10"/>
+  <circle cx="533" cy="594" r="10" fill="#F7F3EA" stroke="#10151C" stroke-opacity="0.15" stroke-width="1.5"/>
+
+  <rect x="160" y="672" width="360" height="9" rx="4.5" fill="#10151C" fill-opacity="0.06"/>
+  <rect x="160" y="672" width="300" height="9" rx="4.5" fill="#10151C" fill-opacity="0.12"/>
+  <rect x="160" y="720" width="140" height="9" rx="4" fill="#10151C" fill-opacity="0.08"/>
+
+  <!-- voile de desactivation -->
+  <rect x="120" y="300" width="520" height="500" rx="20" fill="#ECE6D8" fill-opacity="0.38"/>
+
+  <!-- carte fantome (profondeur, fenetre active) -->
+  <rect x="768" y="234" width="740" height="680" rx="20" fill="#10151C" fill-opacity="0.05"/>
+
+  <!-- ===== FENETRE INTERNE (active, l'equipe aux commandes) ===== -->
+  <g filter="url(#shadow)">
+    <rect x="740" y="200" width="740" height="680" rx="20" fill="#F7F3EA" stroke="#10151C" stroke-opacity="0.14" stroke-width="1.5"/>
+  </g>
+  <line x1="740" y1="256" x2="1480" y2="256" stroke="#10151C" stroke-opacity="0.08" stroke-width="1.5"/>
+  <circle cx="776" cy="228" r="7" fill="#10151C" fill-opacity="0.16"/>
+  <circle cx="802" cy="228" r="7" fill="#10151C" fill-opacity="0.16"/>
+  <circle cx="828" cy="228" r="7" fill="#10151C" fill-opacity="0.16"/>
+  <rect x="868" y="221" width="150" height="14" rx="5" fill="#10151C" fill-opacity="0.12"/>
+  <rect x="1300" y="219" width="52" height="10" rx="4" fill="#10151C" fill-opacity="0.15"/>
+  <rect x="1364" y="212" width="56" height="28" rx="14" fill="#C8A24B"/>
+  <circle cx="1406" cy="226" r="10" fill="#F7F3EA"/>
+
+  <!-- entete -->
+  <rect x="780" y="290" width="240" height="16" rx="6" fill="#10151C" fill-opacity="0.30"/>
+  <rect x="780" y="314" width="150" height="9" rx="4" fill="#10151C" fill-opacity="0.12"/>
+
+  <!-- rangee d'avatars de l'equipe -->
+  <circle cx="804" cy="380" r="22" fill="#10151C" fill-opacity="0.16" stroke="#F7F3EA" stroke-width="3"/>
+  <circle cx="840" cy="380" r="22" fill="#10151C" fill-opacity="0.22" stroke="#F7F3EA" stroke-width="3"/>
+  <circle cx="876" cy="380" r="22" fill="#10151C" fill-opacity="0.28" stroke="#F7F3EA" stroke-width="3"/>
+  <circle cx="912" cy="380" r="22" fill="#10151C" fill-opacity="0.20" stroke="#F7F3EA" stroke-width="3"/>
+  <circle cx="912" cy="380" r="27" stroke="#C8A24B" stroke-width="3" fill="none"/>
+  <rect x="954" y="366" width="58" height="28" rx="14" fill="#10151C" fill-opacity="0.06"/>
+  <rect x="968" y="376" width="30" height="8" rx="3" fill="#10151C" fill-opacity="0.18"/>
+
+  <!-- controles repris (les memes que la fenetre grisee, actifs) -->
+  <line x1="780" y1="496" x2="1440" y2="496" stroke="#10151C" stroke-opacity="0.06" stroke-width="1.5"/>
+  <line x1="780" y1="562" x2="1440" y2="562" stroke="#10151C" stroke-opacity="0.06" stroke-width="1.5"/>
+
+  <rect x="796" y="440" width="28" height="28" rx="8" stroke="#10151C" stroke-opacity="0.30" stroke-width="2.5" fill="none"/>
+  <path d="M803,454 H817" stroke="#10151C" stroke-opacity="0.30" stroke-width="2.5" stroke-linecap="round"/>
+  <rect x="840" y="444" width="220" height="13" rx="5" fill="#10151C" fill-opacity="0.24"/>
+  <rect x="840" y="466" width="140" height="8" rx="4" fill="#10151C" fill-opacity="0.11"/>
+  <rect x="1330" y="443" width="52" height="26" rx="13" fill="#C8A24B"/>
+  <circle cx="1369" cy="456" r="10" fill="#F7F3EA"/>
+
+  <rect x="796" y="506" width="28" height="28" rx="8" stroke="#10151C" stroke-opacity="0.30" stroke-width="2.5" fill="none"/>
+  <circle cx="810" cy="520" r="4" stroke="#10151C" stroke-opacity="0.30" stroke-width="2.5" fill="none"/>
+  <rect x="840" y="510" width="190" height="13" rx="5" fill="#10151C" fill-opacity="0.24"/>
+  <rect x="840" y="532" width="120" height="8" rx="4" fill="#10151C" fill-opacity="0.11"/>
+  <rect x="1330" y="509" width="52" height="26" rx="13" fill="#C8A24B"/>
+  <circle cx="1369" cy="522" r="10" fill="#F7F3EA"/>
+
+  <rect x="796" y="572" width="28" height="28" rx="8" stroke="#10151C" stroke-opacity="0.30" stroke-width="2.5" fill="none"/>
+  <path d="M802,592 l6,-8 l5,4 l6,-9" stroke="#10151C" stroke-opacity="0.30" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
+  <rect x="840" y="576" width="205" height="13" rx="5" fill="#10151C" fill-opacity="0.24"/>
+  <rect x="840" y="598" width="150" height="8" rx="4" fill="#10151C" fill-opacity="0.11"/>
+  <rect x="1330" y="575" width="52" height="26" rx="13" fill="#C8A24B"/>
+  <circle cx="1369" cy="588" r="10" fill="#F7F3EA"/>
+
+  <!-- progression de formation (presque pleine) -->
+  <rect x="780" y="656" width="140" height="11" rx="4" fill="#10151C" fill-opacity="0.15"/>
+  <rect x="780" y="682" width="660" height="10" rx="5" fill="#10151C" fill-opacity="0.08"/>
+  <rect x="780" y="682" width="590" height="10" rx="5" fill="#C8A24B"/>
+  <circle cx="1370" cy="687" r="7" fill="#C8A24B" stroke="#F7F3EA" stroke-width="3"/>
+
+  <!-- modules de formation -->
+  <rect x="780" y="724" width="24" height="24" rx="7" fill="#C8A24B"/>
+  <path d="M786,736 L791,741 L800,731" stroke="#F7F3EA" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="816" y="724" width="24" height="24" rx="7" fill="#C8A24B"/>
+  <path d="M822,736 L827,741 L836,731" stroke="#F7F3EA" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="852" y="724" width="24" height="24" rx="7" fill="#C8A24B"/>
+  <path d="M858,736 L863,741 L872,731" stroke="#F7F3EA" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="888" y="724" width="24" height="24" rx="7" fill="#C8A24B"/>
+  <path d="M894,736 L899,741 L908,731" stroke="#F7F3EA" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="924" y="724" width="24" height="24" rx="7" stroke="#10151C" stroke-opacity="0.25" stroke-width="2.5" fill="none"/>
+
+  <rect x="780" y="796" width="180" height="10" rx="4" fill="#10151C" fill-opacity="0.12"/>
+  <rect x="780" y="818" width="120" height="8" rx="4" fill="#10151C" fill-opacity="0.07"/>
+
+  <!-- noeuds des liaisons -->
+  <g fill="#C8A24B" stroke="#ECE6D8" stroke-width="3">
+    <circle cx="640" cy="420" r="6.5"/>
+    <circle cx="740" cy="398" r="6.5"/>
+    <circle cx="640" cy="540" r="6.5"/>
+    <circle cx="740" cy="516" r="6.5"/>
+    <circle cx="740" cy="634" r="6.5"/>
+  </g>
+  <circle cx="640" cy="660" r="6" stroke="#10151C" stroke-opacity="0.30" stroke-width="2.5" fill="#ECE6D8"/>
+</svg>
