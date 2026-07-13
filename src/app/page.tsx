@@ -6,6 +6,7 @@ import { MarqueeBand } from "@/components/sections/marquee-band";
 import { Methode } from "@/components/sections/methode";
 import { Avantages } from "@/components/sections/avantages";
 import { Equipe } from "@/components/sections/equipe";
+import { CtaBloc } from "@/components/sections/cta";
 
 export const metadata: Metadata = {
   title: "GAIA | Audit, automatisation et formation IA pour les PME",
@@ -23,6 +24,7 @@ export default function Home() {
         <Methode />
         <Avantages />
         <Equipe />
+        <CtaBloc />
       </main>
     </>
   );
