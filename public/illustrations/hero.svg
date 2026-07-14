@@ -104,10 +104,10 @@
   </g>
   <path d="M436,806 H1064" stroke="#10151C" stroke-opacity="0.12" stroke-width="1.5"/>
   <path d="M436,796 C 540,792 660,786 780,780 C 880,775 980,772 1064,766" stroke="#10151C" stroke-opacity="0.18" stroke-width="3" fill="none"/>
-  <path d="M436,788 C 500,782 540,760 610,750 C 680,740 720,712 800,700 C 870,690 920,668 1000,652 C 1030,646 1050,642 1064,640" stroke="#C8A24B" stroke-width="4.5" fill="none" stroke-linecap="round"/>
-  <circle cx="610" cy="750" r="6.5" fill="#C8A24B" stroke="#FBF8F0" stroke-width="3"/>
-  <circle cx="800" cy="700" r="6.5" fill="#C8A24B" stroke="#FBF8F0" stroke-width="3"/>
-  <circle cx="1000" cy="652" r="6.5" fill="#C8A24B" stroke="#FBF8F0" stroke-width="3"/>
+  <path d="M436,790 C 520,786 560,772 630,764 C 700,757 740,740 810,731 C 880,722 950,713 1064,704" stroke="#C8A24B" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+  <circle cx="630" cy="764" r="6.5" fill="#C8A24B" stroke="#FBF8F0" stroke-width="3"/>
+  <circle cx="810" cy="731" r="6.5" fill="#C8A24B" stroke="#FBF8F0" stroke-width="3"/>
+  <circle cx="985" cy="713" r="6.5" fill="#C8A24B" stroke="#FBF8F0" stroke-width="3"/>
 
   <!-- ===== FENETRE SATELLITE : conversation d'agent ===== -->
   <g filter="url(#shadow)">

@@ -86,7 +86,6 @@
   <!-- ===== ZONE GAUCHE : processus en desordre ===== -->
   <g stroke="#10151C" stroke-opacity="0.25" stroke-width="2" fill="none">
     <path d="M430,330 C 470,380 510,470 555,540"/>
-    <path d="M535,330 C 490,390 440,470 400,530"/>
     <path d="M400,530 C 430,545 450,550 480,560"/>
     <path d="M630,570 C 655,585 675,595 690,610" stroke-dasharray="5 6"/>
     <path d="M395,700 C 405,680 415,655 428,632" stroke-dasharray="5 6"/>
