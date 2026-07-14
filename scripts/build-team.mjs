@@ -14,8 +14,12 @@ const DIR = "public/team";
 const NAMES = ["netaniel", "samuel", "aaron", "nils"];
 const SRC_EXT = ["jpg", "jpeg", "png"];
 
+// Accepte "{name}_linkedin.{ext}" (nommage source) ou "{name}.{ext}".
+const candidates = (name) =>
+  SRC_EXT.flatMap((e) => [`${DIR}/${name}_linkedin.${e}`, `${DIR}/${name}.${e}`]);
+
 for (const name of NAMES) {
-  const src = SRC_EXT.map((e) => `${DIR}/${name}.${e}`).find((p) => existsSync(p));
+  const src = candidates(name).find((p) => existsSync(p));
   if (!src) {
     console.log(`SKIP ${name} (aucune source)`);
     continue;
