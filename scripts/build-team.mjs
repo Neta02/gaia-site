@@ -1,5 +1,5 @@
-// Pipeline photos équipe : recadrage carré centré 800x800 + noir et blanc léger
-// (grayscale + contraste doux) pour homogénéiser des photos d'origines diverses.
+// Pipeline photos équipe : recadrage carré centré 800x800 + optimisation webp.
+// Photos EN COULEUR (pas de traitement N&B).
 // Sources attendues : public/team/{netaniel,samuel,aaron,nils}.{jpg,jpeg,png}
 // Sorties optimisées : public/team/{name}.webp
 // Fichier source manquant => on saute (la carte gardera ses initiales).
@@ -26,9 +26,7 @@ for (const name of NAMES) {
   }
   await sharp(src)
     .resize(800, 800, { fit: "cover", position: "centre" }) // carré centré
-    .grayscale() // noir et blanc
-    .linear(1.08, -10.24) // contraste doux (pente 1.08 autour de 128)
-    .webp({ quality: 80 })
+    .webp({ quality: 82 })
     .toFile(`${DIR}/${name}.webp`);
   console.log(`OK  ${src} -> ${DIR}/${name}.webp`);
 }
