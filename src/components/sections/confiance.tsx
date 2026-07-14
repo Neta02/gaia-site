@@ -39,9 +39,10 @@ export function Confiance() {
     <section aria-labelledby="confiance-title" className="border-t border-border">
       <div className="mx-auto max-w-[var(--content-max)] px-[var(--content-gutter)] py-12">
         <Reveal>
+          {/* Titre intermédiaire (pas un H2 : la règle Fraunces H1/H2 ne s'applique pas). */}
           <p
             id="confiance-title"
-            className="text-center text-xs font-semibold tracking-wider text-muted-foreground"
+            className="text-center text-xl font-semibold tracking-tight sm:text-2xl"
           >
             Ils nous ont fait confiance
           </p>
