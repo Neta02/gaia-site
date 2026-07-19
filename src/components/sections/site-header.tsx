@@ -8,10 +8,12 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { CALENDLY_URL, EXTERNAL_LINK } from "@/lib/links";
 
+// Ancres absolues : la nav fonctionne depuis la home comme depuis /recrutement.
 const navLinks = [
-  { href: "#methode", label: "La méthode" },
-  { href: "#equipe", label: "Équipe" },
-  { href: "#faq", label: "FAQ" },
+  { href: "/#proposition", label: "Proposition de valeur" },
+  { href: "/#methode", label: "La méthode" },
+  { href: "/#equipe", label: "Équipe" },
+  { href: "/#faq", label: "FAQ" },
 ];
 
 export function SiteHeader() {
@@ -27,7 +29,7 @@ export function SiteHeader() {
       }`}
     >
       <div className="mx-auto flex h-16 max-w-[var(--content-max)] items-center justify-between px-[var(--content-gutter)]">
-        <a href="#top" className="flex items-center">
+        <a href="/#top" className="flex items-center">
           <Image
             src="/brand/gaia-logo.png"
             alt="GAIA"
@@ -42,7 +44,7 @@ export function SiteHeader() {
           aria-label="Navigation principale"
           className="flex items-center gap-8"
         >
-          <ul className="hidden items-center gap-8 md:flex">
+          <ul className="hidden items-center gap-8 lg:flex">
             {navLinks.map((l) => (
               <li key={l.href}>
                 <a
@@ -55,7 +57,7 @@ export function SiteHeader() {
             ))}
           </ul>
 
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <Button asChild>
               <a href={CALENDLY_URL} {...EXTERNAL_LINK}>
                 Réserver votre audit gratuit
@@ -67,7 +69,7 @@ export function SiteHeader() {
             type="button"
             variant="ghost"
             size="icon"
-            className="md:hidden"
+            className="lg:hidden"
             aria-expanded={open}
             aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
             onClick={() => setOpen((v) => !v)}
@@ -78,7 +80,7 @@ export function SiteHeader() {
       </div>
 
       {open && (
-        <div className="border-t border-border md:hidden">
+        <div className="border-t border-border lg:hidden">
           <ul className="mx-auto flex max-w-[var(--content-max)] flex-col gap-1 px-[var(--content-gutter)] py-4">
             {navLinks.map((l) => (
               <li key={l.href}>
