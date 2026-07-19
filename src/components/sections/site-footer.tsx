@@ -12,7 +12,7 @@ export function SiteFooter() {
         className="mx-auto flex max-w-[var(--content-max)] flex-col gap-8 px-[var(--content-gutter)] py-12 md:flex-row md:items-start md:justify-between"
       >
         <div>
-          <a href="#top" className="inline-flex items-center">
+          <a href="/#top" className="inline-flex items-center">
             <Image
               src="/brand/gaia-logo.png"
               alt="GAIA"
@@ -31,22 +31,28 @@ export function SiteFooter() {
           className="flex flex-wrap gap-x-6 gap-y-3 text-sm"
         >
           <a
-            href="#methode"
+            href="/#methode"
             className="text-foreground/80 transition-colors hover:text-foreground"
           >
             La méthode
           </a>
           <a
-            href="#equipe"
+            href="/#equipe"
             className="text-foreground/80 transition-colors hover:text-foreground"
           >
             Équipe
           </a>
           <a
-            href="#faq"
+            href="/#faq"
             className="text-foreground/80 transition-colors hover:text-foreground"
           >
             FAQ
+          </a>
+          <a
+            href="/recrutement"
+            className="text-foreground/80 transition-colors hover:text-foreground"
+          >
+            Recrutement
           </a>
           {/* TODO : lien LinkedIn GAIA à ajouter quand la page entreprise sera créée */}
           <a
