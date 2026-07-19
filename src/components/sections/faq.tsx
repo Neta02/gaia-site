@@ -37,7 +37,7 @@ const faq: { q: string; r: string }[] = [
   },
   {
     q: "Nos équipes ne sont pas techniques. Vont-elles suivre ?",
-    r: "La formation n'est pas une option chez GAIA, c'est la troisième étape de la méthode. L'objectif est votre autonomie : des équipes qui pilotent les outils au quotidien.",
+    r: "La formation n'est pas une option chez GAIA, c'est le cœur de la dernière étape de la méthode. L'objectif est votre autonomie : des équipes qui pilotent les outils au quotidien.",
   },
   {
     q: "Comment démarre-t-on ?",
