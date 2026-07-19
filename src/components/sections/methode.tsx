@@ -1,24 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/motion/reveal";
 import { CALENDLY_URL, EXTERNAL_LINK } from "@/lib/links";
-import { publicAsset } from "@/lib/assets";
 import { MethodeEtapes } from "@/components/sections/methode-etapes";
-
-/**
- * Illustrations des étapes (personnage BD, ratio 4:5), fournies dans
- * public/illustrations/etape-01..06.{svg,png,webp}. Fichier absent =
- * placeholder sobre dans le panneau (fallback géré par MethodeEtapes).
- */
-function etapeImages(): (string | null)[] {
-  return [1, 2, 3, 4, 5, 6].map((i) => {
-    const base = `illustrations/etape-0${i}`;
-    return (
-      publicAsset(`${base}.svg`) ??
-      publicAsset(`${base}.png`) ??
-      publicAsset(`${base}.webp`)
-    );
-  });
-}
 
 export function Methode() {
   return (
@@ -49,7 +32,7 @@ export function Methode() {
           </p>
         </Reveal>
 
-        <MethodeEtapes images={etapeImages()} />
+        <MethodeEtapes />
 
         <div className="mt-16 text-center">
           <Button asChild size="lg">

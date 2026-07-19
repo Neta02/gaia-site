@@ -1,8 +1,13 @@
 "use client";
 
-import Image from "next/image";
 import { useRef, useState } from "react";
-import { motion, useScroll, useMotionValueEvent } from "motion/react";
+import {
+  motion,
+  useScroll,
+  useSpring,
+  useTransform,
+  useMotionValueEvent,
+} from "motion/react";
 
 import { Reveal } from "@/components/motion/reveal";
 
@@ -48,13 +53,12 @@ const etapes: Etape[] = [
 ];
 
 /**
- * Scrollytelling de la méthode : les étapes défilent, le panneau sticky suit
- * la lecture (illustration du dessus qui glisse et s'efface, pipette qui se
- * remplit d'un cran par étape). Indicateur d'état : il suit le scroll dans les
- * deux sens, contrairement aux reveals de texte qui ne jouent qu'une fois.
- * `images[i]` = asset de l'étape i+1 s'il existe, sinon placeholder sobre.
+ * Les 6 étapes longées par un thermomètre pleine hauteur : le liquide brass
+ * descend en continu avec le scroll (ressort fluide, suit la position de
+ * lecture dans les deux sens), les badges s'allument au passage, et le bulbe
+ * en bas se remplit à l'arrivée sur la dernière étape.
  */
-export function MethodeEtapes({ images }: { images: (string | null)[] }) {
+export function MethodeEtapes() {
   const stepsRef = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState(0);
 
@@ -62,6 +66,9 @@ export function MethodeEtapes({ images }: { images: (string | null)[] }) {
     target: stepsRef,
     offset: ["start 0.55", "end 0.55"],
   });
+  const fill = useSpring(scrollYProgress, { stiffness: 90, damping: 25 });
+  const bulb = useTransform(fill, [0.9, 1], [0, 1]);
+
   useMotionValueEvent(scrollYProgress, "change", (v) => {
     setActive(
       Math.min(etapes.length - 1, Math.max(0, Math.floor(v * etapes.length)))
@@ -69,73 +76,40 @@ export function MethodeEtapes({ images }: { images: (string | null)[] }) {
   });
 
   return (
-    <div className="mt-16 grid gap-10 lg:grid-cols-2 lg:gap-16">
-      {/* Panneau sticky (décoratif) : personnage + pipette graduée */}
-      <div
-        aria-hidden="true"
-        className="sticky top-16 z-30 self-start border-b border-border bg-background pt-3 pb-4 lg:top-24 lg:order-last lg:border-b-0 lg:pt-0 lg:pb-0"
-      >
-        <div className="flex items-stretch justify-center gap-4 lg:gap-6">
-          <div className="relative aspect-[4/5] w-full max-w-[240px] overflow-hidden rounded-xl border border-border lg:max-w-[420px]">
-            {etapes.map((e, i) => (
-              <motion.div
-                key={e.number}
-                initial={false}
-                animate={
-                  i < active ? { opacity: 0, y: "-8%" } : { opacity: 1, y: "0%" }
-                }
-                transition={{ duration: 0.5, ease: "easeOut" }}
-                style={{ zIndex: etapes.length - i }}
-                className="absolute inset-0"
-              >
-                {images[i] ? (
-                  <Image
-                    src={images[i]!}
-                    alt=""
-                    fill
-                    unoptimized
-                    className="object-cover"
-                  />
-                ) : (
-                  <div className="flex size-full items-center justify-center bg-muted">
-                    <span className="text-6xl font-semibold text-foreground/15">
-                      {e.number}
-                    </span>
-                  </div>
-                )}
-              </motion.div>
-            ))}
-          </div>
-
-          {/* Pipette graduée : le niveau monte d'un cran par étape */}
-          <div className="flex flex-col items-center gap-2">
-            <div className="relative w-3 flex-1 overflow-hidden rounded-full border border-border bg-background lg:w-4">
-              {[1, 2, 3, 4, 5].map((g) => (
-                <span
-                  key={g}
-                  className="absolute inset-x-0 h-px bg-border"
-                  style={{ bottom: `${(g * 100) / 6}%` }}
-                />
-              ))}
-              <span
-                className="absolute inset-x-0 bottom-0 bg-accent motion-safe:transition-[height] motion-safe:duration-500"
-                style={{ height: `${((active + 1) * 100) / 6}%` }}
-              />
-            </div>
-            <span className="font-mono text-xs text-muted-foreground">
-              {active + 1}/6
-            </span>
-          </div>
+    <div className="mt-16 flex gap-5 sm:gap-8 lg:gap-12">
+      {/* Thermomètre (décoratif) : tube gradué + bulbe, pleine hauteur du texte */}
+      <div aria-hidden="true" className="flex flex-col items-center">
+        <div className="relative w-3 flex-1 overflow-hidden rounded-full border border-border bg-background sm:w-3.5">
+          {[1, 2, 3, 4, 5].map((g) => (
+            <span
+              key={g}
+              className="absolute inset-x-0 h-px bg-border"
+              style={{ top: `${(g * 100) / 6}%` }}
+            />
+          ))}
+          <motion.span
+            className="absolute inset-0 origin-top bg-accent"
+            style={{ scaleY: fill }}
+          />
         </div>
+        <div className="relative -mt-1 flex size-7 shrink-0 items-center justify-center rounded-full border border-border bg-background sm:size-8">
+          <motion.span
+            className="absolute inset-1 rounded-full bg-accent"
+            style={{ opacity: bulb }}
+          />
+        </div>
+        <span className="mt-2 font-mono text-xs text-muted-foreground">
+          {active + 1}/6
+        </span>
       </div>
 
       {/* Les 6 étapes */}
-      <div ref={stepsRef} className="flex flex-col gap-14 lg:gap-0">
+      <div
+        ref={stepsRef}
+        className="flex max-w-3xl flex-1 flex-col gap-14 sm:gap-16"
+      >
         {etapes.map((e, i) => (
-          <div
-            key={e.number}
-            className="lg:flex lg:min-h-[45vh] lg:flex-col lg:justify-center"
-          >
+          <div key={e.number}>
             <Reveal>
               <div className="flex items-center gap-4">
                 <span
@@ -148,7 +122,7 @@ export function MethodeEtapes({ images }: { images: (string | null)[] }) {
                 >
                   {e.number}
                 </span>
-                <h3 className="text-2xl font-semibold tracking-tight">
+                <h3 className="text-xl font-semibold tracking-tight sm:text-2xl">
                   {e.title}
                 </h3>
               </div>
