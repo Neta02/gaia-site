@@ -35,17 +35,17 @@ const piliers: Pilier[] = [
     exemples: [
       "Référentiel client unique réunissant CRM, facturation et échanges mails",
       "Catalogues, tarifs et stocks synchronisés entre vos outils",
-      "Tableaux de bord alimentés automatiquement, sans ressaisie Excel",
+      "Tableaux de bord alimentés automatiquement",
     ],
     icon: Database,
   },
   {
     number: "02",
-    title: "Automatisation et orchestration des processus",
+    title: "Automatisation des processus",
     description:
       "Les tâches répétitives s'exécutent seules, de bout en bout, sur vos logiciels existants.",
     exemples: [
-      "Devis et factures générés et envoyés depuis vos modèles",
+      "Devis et factures générés et envoyés automatiquement, tels que vous les faites déjà",
       "Relances clients et fournisseurs déclenchées au bon moment",
       "Onboarding d'un client ou d'un salarié orchestré étape par étape",
     ],
@@ -55,11 +55,10 @@ const piliers: Pilier[] = [
     number: "03",
     title: "Recherche intelligente et accès à la connaissance",
     description:
-      "Toute la connaissance de l'entreprise interrogeable en langage naturel, comme un collègue qui aurait tout lu.",
+      "Toute la connaissance de votre entreprise regroupée et facile à interroger. Vous posez votre question, vous obtenez la bonne réponse.",
     exemples: [
       "Assistant qui répond à partir de vos documents internes (procédures, contrats, notices)",
-      "La bonne référence ou le bon précédent client retrouvé en quelques secondes",
-      "Nouveaux arrivants autonomes plus vite, sans solliciter toute l'équipe",
+      "La bonne référence ou le bon dossier client retrouvé en quelques secondes",
     ],
     icon: Search,
   },
@@ -67,11 +66,11 @@ const piliers: Pilier[] = [
     number: "04",
     title: "Prédiction, optimisation et aide à la décision",
     description:
-      "Vos données passées éclairent les décisions à venir : anticiper plutôt que subir.",
+      "Vos données passées éclairent les décisions à venir, pour anticiper plutôt que subir.",
     exemples: [
       "Prévisions de ventes et de trésorerie pour piloter les commandes",
       "Alertes sur les clients à risque de départ ou les retards fournisseurs",
-      "Plannings et tournées optimisés selon la charge réelle",
+      "Plannings et tournées optimisés",
     ],
     icon: TrendingUp,
   },
@@ -81,9 +80,9 @@ const piliers: Pilier[] = [
     description:
       "Quand aucun logiciel du marché ne colle à votre métier, nous le construisons avec vous.",
     exemples: [
-      "Agent qui traite les demandes entrantes (mails, formulaires) et prépare les réponses",
-      "Outil de chiffrage qui applique vos règles métier",
-      "Interface simple taillée pour votre atelier, votre cabinet ou votre agence",
+      "Un agent qui traite les mails entrants et prépare les réponses",
+      "Un outil qui lit vos factures fournisseurs et les saisit dans votre comptabilité",
+      "Un générateur de rapports qui met en page vos comptes rendus d'intervention",
     ],
     icon: Wrench,
   },
@@ -169,14 +168,11 @@ export function PropositionValeur() {
     >
       <div className="mx-auto max-w-[var(--content-max)] px-[var(--content-gutter)] py-[var(--section-py)]">
         <Reveal>
-          <p className="text-xs font-semibold tracking-wider text-muted-foreground uppercase">
-            PROPOSITION DE VALEUR
-          </p>
           <h2
             id="proposition-title"
-            className="font-display mt-4 max-w-2xl text-3xl font-semibold tracking-tight sm:text-4xl"
+            className="font-display max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl"
           >
-            L&apos;IA utile, étage par étage.
+            Proposition de valeur
           </h2>
           <p className="mt-6 max-w-3xl text-muted-foreground">
             Cinq familles de services, du socle de données aux outils sur mesure.

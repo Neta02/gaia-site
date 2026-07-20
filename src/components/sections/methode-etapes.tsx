@@ -30,25 +30,25 @@ const etapes: Etape[] = [
     number: "03",
     title: "Centraliser et normaliser",
     description:
-      "L'information éparpillée est rassemblée en une source fiable, et vos processus deviennent explicites et stables. Un processus normalisé est un processus fiable : la fondation sur laquelle tout le reste tient.",
+      "Nous rassemblons l'information éparpillée en une source fiable et nous mettons vos processus au propre. C'est la fondation sur laquelle tout le reste tient.",
   },
   {
     number: "04",
     title: "Automatiser",
     description:
-      "Les tâches répétitives passent à des outils construits sur mesure, adaptés à votre façon de travailler et connectés à l'existant. Vos équipes se concentrent là où elles ont de la valeur.",
+      "Les tâches répétitives sont prises en charge par des outils construits sur mesure, qui s'adaptent à votre façon de travailler. Vos équipes gagnent du temps pour ce qui compte vraiment.",
   },
   {
     number: "05",
     title: "Augmenter avec l'IA",
     description:
-      "Agents et assistants viennent augmenter vos processus là où l'effort paie le plus. Pas d'IA pour l'IA : elle s'appuie sur des processus déjà solides.",
+      "Agents et assistants viennent augmenter vos processus là où l'effort paie le plus. Pas d'IA pour l'IA, elle s'appuie sur des processus déjà solides.",
   },
   {
     number: "06",
     title: "Piloter et améliorer",
     description:
-      "Des indicateurs simples pour suivre ce qui tourne, corriger, faire évoluer. Vos équipes sont formées pour piloter sans nous : l'autonomie est la destination.",
+      "Des indicateurs pour suivre ce qui tourne, corriger et faire évoluer. Vos équipes sont formées pour piloter les outils sans nous.",
   },
 ];
 
