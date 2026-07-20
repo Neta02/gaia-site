@@ -8,12 +8,11 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { CALENDLY_URL, EXTERNAL_LINK } from "@/lib/links";
 
-// Ancres absolues : la nav fonctionne depuis la home comme depuis /recrutement.
+// Liens absolus : la nav fonctionne depuis la home comme depuis les pages.
 const navLinks = [
-  { href: "/#proposition", label: "Proposition de valeur" },
-  { href: "/#methode", label: "La méthode" },
+  { href: "/formation", label: "Formation" },
+  { href: "/gaia-lab", label: "GAIA Lab" },
   { href: "/#equipe", label: "Équipe" },
-  { href: "/#faq", label: "FAQ" },
 ];
 
 export function SiteHeader() {

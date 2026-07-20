@@ -31,10 +31,16 @@ export function SiteFooter() {
           className="flex flex-wrap gap-x-6 gap-y-3 text-sm"
         >
           <a
-            href="/#methode"
+            href="/formation"
             className="text-foreground/80 transition-colors hover:text-foreground"
           >
-            La méthode
+            Formation
+          </a>
+          <a
+            href="/gaia-lab"
+            className="text-foreground/80 transition-colors hover:text-foreground"
+          >
+            GAIA Lab
           </a>
           <a
             href="/#equipe"

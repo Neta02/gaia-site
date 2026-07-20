@@ -26,7 +26,7 @@ export function Hero() {
               </a>
             </Button>
             <Button asChild size="lg" variant="outline">
-              <a href="/#methode">Découvrir la méthode</a>
+              <a href="/#expertise">Découvrir notre expertise</a>
             </Button>
           </div>
         </StaggerItem>
