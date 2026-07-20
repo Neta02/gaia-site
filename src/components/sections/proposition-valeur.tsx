@@ -1,7 +1,3 @@
-"use client";
-
-import { useState } from "react";
-import { motion } from "motion/react";
 import {
   Database,
   Workflow,
@@ -112,31 +108,24 @@ function EspaceDemo({ p }: { p: Pilier }) {
   );
 }
 
-/** Contenu détaillé d'un étage : description, exemples concrets, espace démo. */
-function PilierPanel({ p, layout }: { p: Pilier; layout: "desktop" | "mobile" }) {
+/** Un étage complet : en-tête, description, exemples concrets, espace démo. */
+function PilierBloc({ p }: { p: Pilier }) {
   return (
-    <motion.div
-      key={p.number}
-      initial={{ opacity: 0, y: 12 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.35, ease: "easeOut" }}
-      className={cn(
-        "gap-8",
-        layout === "desktop" ? "grid xl:grid-cols-[1fr_320px]" : "grid"
-      )}
-    >
+    <div className="grid gap-8 lg:grid-cols-[1fr_340px]">
       <div>
-        {layout === "desktop" && (
-          <div className="flex items-center gap-3">
-            <span className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-accent">
-              <p.icon className="size-5 text-accent-foreground" aria-hidden="true" />
-            </span>
-            <h3 className="text-xl font-semibold tracking-tight">{p.title}</h3>
-          </div>
-        )}
-        <p className={cn("text-muted-foreground", layout === "desktop" && "mt-4")}>
-          {p.description}
-        </p>
+        <div className="flex items-center gap-3">
+          <span className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-accent">
+            <p.icon
+              className="size-5 text-accent-foreground"
+              aria-hidden="true"
+            />
+          </span>
+          <span className="font-mono text-xs text-muted-foreground">
+            {p.number}
+          </span>
+          <h3 className="text-xl font-semibold tracking-tight">{p.title}</h3>
+        </div>
+        <p className="mt-4 text-muted-foreground">{p.description}</p>
         <p className="mt-5 text-xs font-semibold tracking-wider text-muted-foreground uppercase">
           Exemples concrets :
         </p>
@@ -152,14 +141,11 @@ function PilierPanel({ p, layout }: { p: Pilier; layout: "desktop" | "mobile" })
         </ul>
       </div>
       <EspaceDemo p={p} />
-    </motion.div>
+    </div>
   );
 }
 
 export function PropositionValeur() {
-  const [active, setActive] = useState(0);
-  const actif = piliers[active];
-
   return (
     <section
       id="proposition"
@@ -180,67 +166,18 @@ export function PropositionValeur() {
           </p>
         </Reveal>
 
-        {/* Desktop : immeuble (01 en bas) + panneau de l'étage actif */}
-        <div className="mt-12 hidden gap-10 lg:grid lg:grid-cols-[minmax(0,420px)_1fr] lg:gap-14">
-          <div
-            aria-label="Choisir un étage"
-            className="flex flex-col-reverse items-center gap-2 self-start"
-          >
-            {piliers.map((p, i) => (
-              <motion.button
-                key={p.number}
-                type="button"
-                onClick={() => setActive(i)}
-                aria-current={active === i ? "true" : undefined}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.6, ease: "easeOut", delay: i * 0.1 }}
-                style={{ width: `${100 - i * 4}%` }}
-                className={cn(
-                  "flex items-center gap-3 rounded-lg px-4 py-3.5 text-left transition-colors duration-300",
-                  active === i
-                    ? "bg-accent text-accent-foreground"
-                    : "bg-secondary text-secondary-foreground hover:bg-muted"
-                )}
-              >
-                <span className="font-mono text-xs">{p.number}</span>
-                <p.icon className="size-4 shrink-0" aria-hidden="true" />
-                <span className="text-sm font-medium">{p.title}</span>
-              </motion.button>
-            ))}
-          </div>
-
-          <div className="lg:min-h-[320px]">
-            <PilierPanel p={actif} layout="desktop" />
-          </div>
-        </div>
-
-        {/* Mobile : liste 01 à 05 en accordéon, premier étage ouvert */}
-        <div className="mt-10 flex flex-col gap-2 lg:hidden">
+        {/* Les 5 étages, tous affichés, séparés par un filet. */}
+        <div className="mt-12 flex flex-col">
           {piliers.map((p, i) => (
-            <div key={p.number}>
-              <button
-                type="button"
-                onClick={() => setActive(i)}
-                aria-expanded={active === i}
-                className={cn(
-                  "flex w-full items-center gap-3 rounded-lg px-4 py-3.5 text-left transition-colors duration-300",
-                  active === i
-                    ? "bg-accent text-accent-foreground"
-                    : "bg-secondary text-secondary-foreground"
-                )}
-              >
-                <span className="font-mono text-xs">{p.number}</span>
-                <p.icon className="size-4 shrink-0" aria-hidden="true" />
-                <span className="text-sm font-medium">{p.title}</span>
-              </button>
-              {active === i && (
-                <div className="px-1 py-6">
-                  <PilierPanel p={p} layout="mobile" />
-                </div>
+            <Reveal
+              key={p.number}
+              className={cn(
+                "py-10 first:pt-0 last:pb-0",
+                i > 0 && "border-t border-border"
               )}
-            </div>
+            >
+              <PilierBloc p={p} />
+            </Reveal>
           ))}
         </div>
       </div>
