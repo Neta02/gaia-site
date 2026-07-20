@@ -5,9 +5,10 @@ import { Hero } from "@/components/sections/hero";
 import { Confiance } from "@/components/sections/confiance";
 import { Expertise } from "@/components/sections/expertise";
 import { Newsletter } from "@/components/sections/newsletter";
-import { Avantages } from "@/components/sections/avantages";
 import { Equipe } from "@/components/sections/equipe";
-import { CtaBloc } from "@/components/sections/cta";
+import { Contact } from "@/components/sections/contact";
+import { Reseaux } from "@/components/sections/reseaux";
+import { Avantages } from "@/components/sections/avantages";
 import { Faq } from "@/components/sections/faq";
 import { SiteFooter } from "@/components/sections/site-footer";
 
@@ -43,9 +44,10 @@ export default function Home() {
         <Confiance />
         <Expertise />
         <Newsletter />
-        <Avantages />
         <Equipe />
-        <CtaBloc />
+        <Contact />
+        <Reseaux />
+        <Avantages />
         <Faq />
       </main>
       <SiteFooter />

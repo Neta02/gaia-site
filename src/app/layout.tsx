@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Fraunces } from "next/font/google";
 import "./globals.css";
 
 import { MotionProvider } from "@/components/motion/motion-provider";
+import { ChatWidget } from "@/components/chat-widget";
 import { SITE_URL } from "@/lib/links";
 
 const geistSans = Geist({
@@ -39,6 +40,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <MotionProvider>{children}</MotionProvider>
+        <ChatWidget />
       </body>
     </html>
   );
