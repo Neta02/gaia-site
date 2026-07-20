@@ -3,8 +3,7 @@ import type { Metadata } from "next";
 import { SiteHeader } from "@/components/sections/site-header";
 import { Hero } from "@/components/sections/hero";
 import { Confiance } from "@/components/sections/confiance";
-import { PropositionValeur } from "@/components/sections/proposition-valeur";
-import { Methode } from "@/components/sections/methode";
+import { Expertise } from "@/components/sections/expertise";
 import { Avantages } from "@/components/sections/avantages";
 import { Equipe } from "@/components/sections/equipe";
 import { CtaBloc } from "@/components/sections/cta";
@@ -41,8 +40,7 @@ export default function Home() {
       <main id="top" className="flex-1">
         <Hero />
         <Confiance />
-        <PropositionValeur />
-        <Methode />
+        <Expertise />
         <Avantages />
         <Equipe />
         <CtaBloc />
