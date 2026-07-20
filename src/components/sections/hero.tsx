@@ -14,8 +14,7 @@ export function Hero() {
         <StaggerItem className="mt-6">
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
             GAIA normalise vos processus, les automatise avec des outils
-            construits sur mesure, et forme vos équipes à les piloter. Premier
-            agent en production en six semaines.
+            construits sur mesure, et forme vos équipes à les piloter.
           </p>
         </StaggerItem>
         <StaggerItem className="mt-8">

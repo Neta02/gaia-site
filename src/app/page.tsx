@@ -4,6 +4,7 @@ import { SiteHeader } from "@/components/sections/site-header";
 import { Hero } from "@/components/sections/hero";
 import { Confiance } from "@/components/sections/confiance";
 import { Expertise } from "@/components/sections/expertise";
+import { Newsletter } from "@/components/sections/newsletter";
 import { Avantages } from "@/components/sections/avantages";
 import { Equipe } from "@/components/sections/equipe";
 import { CtaBloc } from "@/components/sections/cta";
@@ -41,6 +42,7 @@ export default function Home() {
         <Hero />
         <Confiance />
         <Expertise />
+        <Newsletter />
         <Avantages />
         <Equipe />
         <CtaBloc />
