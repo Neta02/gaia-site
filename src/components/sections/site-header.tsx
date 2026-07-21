@@ -11,7 +11,7 @@ import { CALENDLY_URL, EXTERNAL_LINK } from "@/lib/links";
 // Liens absolus : la nav fonctionne depuis la home comme depuis les pages.
 const navLinks = [
   { href: "/formation", label: "Formation" },
-  { href: "/gaia-lab", label: "GAIA Lab" },
+  { href: "/gaia-lab", label: "Conseil et solutions IA" },
   { href: "/#equipe", label: "Équipe" },
 ];
 

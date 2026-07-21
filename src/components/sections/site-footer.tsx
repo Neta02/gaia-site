@@ -40,7 +40,7 @@ export function SiteFooter() {
             href="/gaia-lab"
             className="text-foreground/80 transition-colors hover:text-foreground"
           >
-            GAIA Lab
+            Conseil et solutions IA
           </a>
           <a
             href="/#equipe"

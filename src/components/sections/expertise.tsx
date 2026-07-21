@@ -64,7 +64,7 @@ const branches: Branche[] = [
       "Nous concevons et déployons vos solutions IA, de l'audit de vos processus au premier agent en production.",
     formats: [
       {
-        lead: "Mission IA In-House",
+        lead: "Missions IA In-House",
         rest: "des experts GAIA intégrés à vos équipes, qui conçoivent et mettent en production vos projets IA de l'intérieur",
       },
       { lead: "GAIA", rest: "la plateforme d'IA métiers" },

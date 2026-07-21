@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/reveal";
 import { CALENDLY_URL, EXTERNAL_LINK } from "@/lib/links";
 
-const title = "GAIA Lab | Conseil et solutions IA pour les PME";
+const title = "Conseil et solutions IA | GAIA";
 const description =
   "Conseil et solutions IA : audit de vos processus, missions IA in-house et plateforme d'agents IA métiers.";
 
