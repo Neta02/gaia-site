@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
 import {
   Presentation,
-  Compass,
-  Target,
-  Bot,
-  ShieldCheck,
   Users,
+  Lightbulb,
+  Bot,
   Check,
   type LucideIcon,
 } from "lucide-react";
@@ -37,51 +35,38 @@ type Programme = {
 const programmes: Programme[] = [
   {
     number: "01",
-    title: "Show IA",
-    description: "Conférence d'acculturation à l'IA générative.",
+    title: "Conférence d'acculturation",
+    description:
+      "Une intervention qui met tout le monde au même niveau : ce que l'IA générative fait déjà, ce qu'elle ne fait pas, et ce qu'elle change dans votre secteur. Sans jargon, avec des exemples de votre métier.",
     icon: Presentation,
   },
   {
     number: "02",
-    title: "Masterclass dirigeants et CODIR",
+    title: "Ateliers pratiques sur vos cas métier",
     description:
-      "Stratégie IA, ROI, risques et gouvernance, pour vous aider à bâtir votre feuille de route.",
-    icon: Compass,
+      "Vos équipes travaillent sur leurs propres dossiers, service par service : RH, commerce, finance, support. Chacun repart avec des usages qu'il peut appliquer dès le lendemain.",
+    icon: Users,
   },
   {
     number: "03",
-    title: "Ateliers pratiques sur vos cas métiers (RH, finance, ventes, support…)",
+    title: "Prompt engineering en équipe",
     description:
-      "Identifier les usages à plus fort impact et les mettre en pratique.",
-    icon: Target,
+      "Une session où les équipes s'attaquent en direct à de vrais problèmes de votre entreprise. On compare les approches, on garde ce qui marche, et vos meilleurs prompts deviennent des repères partagés.",
+    icon: Lightbulb,
   },
   {
     number: "04",
-    title: "Formation agents IA",
-    description: "De l'idée au prototype fonctionnel.",
-    icon: Bot,
-  },
-  {
-    number: "05",
-    title: "Formation données, sécurité et RGPD",
+    title: "De l'idée à l'agent IA, en une journée",
     description:
-      "Ce qu'on confie à l'IA, et comment garder votre souveraineté.",
-    icon: ShieldCheck,
-  },
-  {
-    number: "06",
-    title: "Parcours référents IA",
-    description: "Des relais internes qui font vivre les usages de l'IA.",
-    icon: Users,
+      "Une journée pour construire un premier agent fonctionnel avec vos équipes. Elles repartent avec l'outil et surtout avec la méthode pour en concevoir d'autres.",
+    icon: Bot,
   },
 ];
 
 const principes = [
-  "Construites sur vos cas réels",
-  "Experts IA et métiers",
-  "Sur vos outils et vos données",
-  "Formations 100 % personnalisées",
-  "Progression mesurée en fin de formation",
+  "Programmes construits sur vos métiers, jamais sur des exemples génériques",
+  "Formateurs praticiens, qui déploient aussi des solutions en entreprise",
+  "Format court, pensé pour des équipes qui ont un travail à faire à côté",
 ];
 
 export default function Formation() {
@@ -104,9 +89,9 @@ export default function Formation() {
             </StaggerItem>
             <StaggerItem className="mt-6">
               <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-                GAIA forme les entreprises à l&apos;IA à travers des parcours
-                construits sur mesure pour chacune, au plus près de leurs métiers
-                et de leurs priorités de terrain.
+                Nous formons vos équipes avec des programmes taillés sur vos
+                métiers et vos enjeux, pour qu&apos;elles utilisent l&apos;IA au
+                quotidien plutôt que d&apos;en entendre parler.
               </p>
             </StaggerItem>
           </Stagger>
