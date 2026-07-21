@@ -14,7 +14,6 @@ type Format = { lead: string; rest?: string };
 type Branche = {
   href: string;
   title: string;
-  subtitle: string;
   description: string;
   formats: Format[];
   checklist: string[];
@@ -26,7 +25,6 @@ const branches: Branche[] = [
   {
     href: "/formation",
     title: "Formations IA personnalisées",
-    subtitle: "Séminaires et montée en compétences",
     description:
       "GAIA forme les entreprises à l'IA à travers des parcours construits sur mesure pour chacune, au plus près de leurs métiers et de leurs priorités de terrain.",
     formats: [
@@ -61,8 +59,7 @@ const branches: Branche[] = [
   },
   {
     href: "/gaia-lab",
-    title: "GAIA Lab",
-    subtitle: "Conseil et solutions IA",
+    title: "Conseil et solutions IA",
     description:
       "Nous concevons et déployons vos solutions IA, de l'audit de vos processus au premier agent en production.",
     formats: [
@@ -107,8 +104,6 @@ function Carte({ b }: { b: Branche }) {
           {b.title}
         </h3>
       </div>
-      <p className="mt-2 text-sm text-muted-foreground italic">{b.subtitle}</p>
-
       <p className="mt-5 text-muted-foreground">{b.description}</p>
 
       <ul className="mt-6 space-y-2.5 text-sm">

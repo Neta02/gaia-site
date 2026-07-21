@@ -59,8 +59,8 @@ export function Newsletter() {
               On fait la veille IA à votre place.
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-primary-foreground/80">
-              Des analyses claires et des usages concrets de l&apos;IA en
-              entreprise, directement dans votre boîte mail.
+              Toute l&apos;actualité et les meilleurs usages de l&apos;IA du
+              moment, directement dans votre boîte mail.
             </p>
 
             <div className="mt-8">
