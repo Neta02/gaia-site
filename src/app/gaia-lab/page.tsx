@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Rocket, Bot, Check, type LucideIcon } from "lucide-react";
+import { Users, Bot, Check, type LucideIcon } from "lucide-react";
 
 import { SiteHeader } from "@/components/sections/site-header";
 import { SiteFooter } from "@/components/sections/site-footer";
@@ -11,7 +11,7 @@ import { CALENDLY_URL, EXTERNAL_LINK } from "@/lib/links";
 
 const title = "GAIA Lab | Conseil et solutions IA pour les PME";
 const description =
-  "Le GAIA Lab conçoit et déploie vos solutions IA : audit de vos processus, POC et MVP en six semaines, agents IA métiers.";
+  "Le GAIA Lab conçoit et déploie vos solutions IA : audit de vos processus, mission IA in-house et plateforme d'agents IA métiers.";
 
 export const metadata: Metadata = {
   title,
@@ -23,39 +23,33 @@ export const metadata: Metadata = {
 type Format = {
   number: string;
   title: string;
-  baseline: string;
   description: string;
-  points: string[];
   icon: LucideIcon;
 };
 
 const formats: Format[] = [
   {
     number: "01",
-    title: "POC et MVP en six semaines",
-    baseline: "Un premier outil en production, vite",
+    title: "Mission IA In-House",
     description:
-      "Nous partons d'un cas d'usage prioritaire et nous le menons jusqu'à un outil que vos équipes utilisent vraiment. Six semaines pour passer de l'idée au résultat mesurable.",
-    points: [
-      "Agents IA et automatisations sur vos processus réels",
-      "Connexion à vos logiciels existants",
-      "Vos équipes formées pour reprendre la main",
-    ],
-    icon: Rocket,
+      "Des experts GAIA intégrés à vos équipes, qui conçoivent et mettent en production vos projets IA de l'intérieur.",
+    icon: Users,
   },
   {
     number: "02",
-    title: "GAIA, la plateforme d'agents IA métiers",
-    baseline: "Des agents prêts à brancher",
+    title: "GAIA : la plateforme d'IA métiers",
     description:
       "Des agents déjà construits pour les tâches qui reviennent dans toutes les PME. Simples à mettre en place, ils font gagner du temps dès les premiers jours.",
-    points: [
-      "Mise en route rapide, sans projet lourd",
-      "Adaptés à votre métier et à vos outils",
-      "Vous ajoutez des agents au fil de vos besoins",
-    ],
     icon: Bot,
   },
+];
+
+const benefices = [
+  "Solutions sur-mesure",
+  "Déploiement rapide",
+  "Formation des équipes incluse",
+  "Orientées ROI et performance",
+  "Audit d'entrée de deux heures offert",
 ];
 
 export default function GaiaLab() {
@@ -130,16 +124,15 @@ export default function GaiaLab() {
         >
           <div className="mx-auto max-w-[var(--content-max)] px-[var(--content-gutter)] py-[var(--section-py)]">
             <Reveal>
+              <p className="text-xs font-semibold tracking-wider text-muted-foreground uppercase">
+                2 formats d&apos;accompagnement
+              </p>
               <h2
                 id="formats-title"
-                className="font-display max-w-3xl text-3xl font-semibold tracking-tight sm:text-4xl"
+                className="font-display mt-4 max-w-3xl text-3xl font-semibold tracking-tight sm:text-4xl"
               >
-                Deux formats d&apos;accompagnement
+                Accompagner vos projets IA
               </h2>
-              <p className="mt-6 max-w-3xl text-muted-foreground">
-                Un projet mené de bout en bout, ou des agents prêts à brancher.
-                Selon ce que vous voulez obtenir et à quelle vitesse.
-              </p>
             </Reveal>
 
             <Stagger className="mt-12 grid gap-6 lg:grid-cols-2 lg:gap-8">
@@ -160,27 +153,28 @@ export default function GaiaLab() {
                     <h3 className="mt-5 text-xl font-semibold tracking-tight">
                       {f.title}
                     </h3>
-                    <p className="mt-1 text-sm text-muted-foreground italic">
-                      {f.baseline}
-                    </p>
-                    <p className="mt-5 text-muted-foreground">{f.description}</p>
-                    <ul className="mt-6 space-y-2.5">
-                      {f.points.map((p) => (
-                        <li key={p} className="flex items-start gap-2.5 text-sm">
-                          <span className="mt-0.5 flex size-4.5 shrink-0 items-center justify-center rounded-full bg-primary">
-                            <Check
-                              className="size-3 text-accent"
-                              aria-hidden="true"
-                            />
-                          </span>
-                          {p}
-                        </li>
-                      ))}
-                    </ul>
+                    <p className="mt-4 text-muted-foreground">{f.description}</p>
                   </div>
                 </StaggerItem>
               ))}
             </Stagger>
+
+            {/* Benefices communs aux deux formats */}
+            <Reveal className="mt-10">
+              <ul className="mx-auto flex max-w-3xl flex-wrap justify-center gap-x-6 gap-y-3">
+                {benefices.map((b) => (
+                  <li key={b} className="flex items-center gap-2 text-sm">
+                    <span className="flex size-4.5 shrink-0 items-center justify-center rounded-full bg-primary">
+                      <Check
+                        className="size-3 text-accent"
+                        aria-hidden="true"
+                      />
+                    </span>
+                    {b}
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
           </div>
         </section>
 
