@@ -24,31 +24,31 @@ const etapes: Etape[] = [
     number: "02",
     title: "Connecter",
     description:
-      "Nous relions les logiciels que vous utilisez déjà pour que l'information circule sans ressaisie. Vos outils se parlent enfin, sans tout changer d'un coup.",
+      "Nous relions les logiciels que vous utilisez déjà pour que l'information circule sans ressaisie.",
   },
   {
     number: "03",
     title: "Centraliser et normaliser",
     description:
-      "Nous rassemblons l'information éparpillée en une source fiable et nous mettons vos processus au propre. C'est la fondation sur laquelle tout le reste tient.",
+      "Nous rassemblons l'information éparpillée en une source fiable et nous mettons vos processus au propre.",
   },
   {
     number: "04",
     title: "Automatiser",
     description:
-      "Les tâches répétitives sont prises en charge par des outils construits sur mesure, qui s'adaptent à votre façon de travailler. Vos équipes gagnent du temps pour ce qui compte vraiment.",
+      "Les tâches répétitives sont prises en charge par des outils construits sur mesure, qui s'adaptent à votre façon de travailler.",
   },
   {
     number: "05",
     title: "Augmenter avec l'IA",
     description:
-      "Agents et assistants viennent augmenter vos processus là où l'effort paie le plus. Pas d'IA pour l'IA, elle s'appuie sur des processus déjà solides.",
+      "Agents et assistants viennent augmenter vos processus là où l'effort paie le plus.",
   },
   {
     number: "06",
     title: "Piloter et améliorer",
     description:
-      "Des indicateurs pour suivre ce qui tourne, corriger et faire évoluer. Vos équipes sont formées pour piloter les outils sans nous.",
+      "Des indicateurs pour mesurer les performances de vos agents, les corriger et les faire évoluer. Vos équipes sont formées pour piloter les outils de façon autonome.",
   },
 ];
 

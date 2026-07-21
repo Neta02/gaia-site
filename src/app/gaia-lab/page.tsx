@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Rocket, Bot, Check, type LucideIcon } from "lucide-react";
+import { Users, Bot, Check, type LucideIcon } from "lucide-react";
 
 import { SiteHeader } from "@/components/sections/site-header";
 import { SiteFooter } from "@/components/sections/site-footer";
@@ -11,7 +11,7 @@ import { CALENDLY_URL, EXTERNAL_LINK } from "@/lib/links";
 
 const title = "GAIA Lab | Conseil et solutions IA pour les PME";
 const description =
-  "Le GAIA Lab conçoit et déploie vos solutions IA : audit de vos processus, POC et MVP en six semaines, agents IA métiers.";
+  "Conseil et solutions IA : audit de vos processus, missions IA in-house et plateforme d'agents IA métiers.";
 
 export const metadata: Metadata = {
   title,
@@ -32,27 +32,32 @@ type Format = {
 const formats: Format[] = [
   {
     number: "01",
-    title: "POC et MVP en six semaines",
-    baseline: "Un premier outil en production, vite",
+    title: "Missions IA In-House",
+    baseline:
+      "Des experts GAIA au sein de vos équipes, qui conçoivent et déploient vos projets IA de l'intérieur.",
     description:
-      "Nous partons d'un cas d'usage prioritaire et nous le menons jusqu'à un outil que vos équipes utilisent vraiment. Six semaines pour passer de l'idée au résultat mesurable.",
+      "Un expert GAIA rejoint votre entreprise et travaille au quotidien avec vos équipes : il apprend vos processus, construit vos agents et fait monter vos collaborateurs en compétence.",
     points: [
-      "Agents IA et automatisations sur vos processus réels",
-      "Connexion à vos logiciels existants",
-      "Vos équipes formées pour reprendre la main",
+      "Un expert dédié à votre entreprise",
+      "Immergé au quotidien dans vos équipes",
+      "De la conception au déploiement des agents",
+      "Transfert de compétences en continu",
+      "Un interlocuteur unique en direct",
     ],
-    icon: Rocket,
+    icon: Users,
   },
   {
     number: "02",
     title: "GAIA, la plateforme d'agents IA métiers",
-    baseline: "Des agents prêts à brancher",
+    baseline: "Des agents prêts à l'emploi",
     description:
       "Des agents déjà construits pour les tâches qui reviennent dans toutes les PME. Simples à mettre en place, ils font gagner du temps dès les premiers jours.",
     points: [
-      "Mise en route rapide, sans projet lourd",
-      "Adaptés à votre métier et à vos outils",
-      "Vous ajoutez des agents au fil de vos besoins",
+      "Des agents conçus métier par métier",
+      "Déployés et suivis par nos experts",
+      "Branchés sur vos logiciels",
+      "Conformes RGPD",
+      "Des performances mesurées en continu",
     ],
     icon: Bot,
   },
@@ -67,19 +72,14 @@ export default function GaiaLab() {
         <section className="mx-auto max-w-[var(--content-max)] px-[var(--content-gutter)] py-20 lg:py-24">
           <Stagger on="load" className="mx-auto max-w-3xl text-center">
             <StaggerItem>
-              <p className="text-xs font-semibold tracking-wider text-muted-foreground uppercase">
-                CONSEIL ET SOLUTIONS IA
-              </p>
-            </StaggerItem>
-            <StaggerItem className="mt-4">
               <h1 className="font-display text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
-                GAIA Lab
+                Conseil et solutions IA
               </h1>
             </StaggerItem>
             <StaggerItem className="mt-6">
               <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-                Nous concevons et déployons vos solutions IA, de l&apos;audit de
-                vos processus au premier agent en production.
+                Des agents IA pensés pour votre activité, au service de vos
+                équipes.
               </p>
             </StaggerItem>
           </Stagger>
@@ -90,12 +90,9 @@ export default function GaiaLab() {
           <div className="mx-auto max-w-[var(--content-max)] px-[var(--content-gutter)] py-[var(--section-py)]">
             <Reveal className="rounded-2xl bg-primary px-6 py-14 text-primary-foreground sm:px-12">
               <div className="mx-auto max-w-2xl text-center">
-                <p className="text-xs font-semibold tracking-wider text-accent uppercase">
-                  CONSEIL, AUDIT, STRATÉGIE ET CAS D&apos;USAGE
-                </p>
                 <h2
                   id="audit-title"
-                  className="font-display mt-4 text-2xl font-semibold tracking-tight sm:text-3xl"
+                  className="font-display text-2xl font-semibold tracking-tight sm:text-3xl"
                 >
                   Vous voulez d&apos;abord y voir clair ?
                 </h2>
@@ -137,8 +134,9 @@ export default function GaiaLab() {
                 Deux formats d&apos;accompagnement
               </h2>
               <p className="mt-6 max-w-3xl text-muted-foreground">
-                Un projet mené de bout en bout, ou des agents prêts à brancher.
-                Selon ce que vous voulez obtenir et à quelle vitesse.
+                Un projet mené de bout en bout, ou des agents prêts à
+                l&apos;emploi. Selon ce que vous voulez obtenir et à quelle
+                vitesse.
               </p>
             </Reveal>
 

@@ -22,8 +22,7 @@ export function Methode() {
             Vos process d&apos;abord, l&apos;IA ensuite.
           </h2>
           <p className="mt-6 max-w-3xl text-muted-foreground">
-            L&apos;IA générative ne répare pas un processus flou : elle
-            l&apos;accélère. Selon la RAND Corporation, plus de 80 % des projets
+            Selon la RAND Corporation, plus de 80 % des projets
             d&apos;IA échouent, soit deux fois plus que les projets informatiques
             classiques, et presque toujours pour des raisons d&apos;organisation
             plutôt que de technologie. Notre méthode s&apos;attaque à cette cause

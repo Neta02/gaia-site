@@ -31,7 +31,7 @@ const piliers: Pilier[] = [
     exemples: [
       "Référentiel client unique réunissant CRM, facturation et échanges mails",
       "Catalogues, tarifs et stocks synchronisés entre vos outils",
-      "Tableaux de bord alimentés automatiquement",
+      "Fichiers Excel éparpillés rapatriés dans votre ERP, avec une source unique par donnée",
     ],
     icon: Database,
   },
@@ -41,7 +41,7 @@ const piliers: Pilier[] = [
     description:
       "Les tâches répétitives s'exécutent seules, de bout en bout, sur vos logiciels existants.",
     exemples: [
-      "Devis et factures générés et envoyés automatiquement, tels que vous les faites déjà",
+      "Devis et factures générés et envoyés automatiquement",
       "Relances clients et fournisseurs déclenchées au bon moment",
       "Onboarding d'un client ou d'un salarié orchestré étape par étape",
     ],
@@ -51,10 +51,10 @@ const piliers: Pilier[] = [
     number: "03",
     title: "Recherche intelligente et accès à la connaissance",
     description:
-      "Toute la connaissance de votre entreprise regroupée et facile à interroger. Vous posez votre question, vous obtenez la bonne réponse.",
+      "Toute la connaissance de votre entreprise regroupée et interrogeable à tout moment.",
     exemples: [
       "Assistant qui répond à partir de vos documents internes (procédures, contrats, notices)",
-      "La bonne référence ou le bon dossier client retrouvé en quelques secondes",
+      "Assistant qui retrouve la bonne référence ou le bon dossier client en quelques secondes",
     ],
     icon: Search,
   },
@@ -62,7 +62,7 @@ const piliers: Pilier[] = [
     number: "04",
     title: "Prédiction, optimisation et aide à la décision",
     description:
-      "Vos données passées éclairent les décisions à venir, pour anticiper plutôt que subir.",
+      "Vos données passées éclairent les décisions à venir, et vous permettent d'anticiper plutôt que de subir.",
     exemples: [
       "Prévisions de ventes et de trésorerie pour piloter les commandes",
       "Alertes sur les clients à risque de départ ou les retards fournisseurs",
@@ -162,7 +162,6 @@ export function PropositionValeur() {
           </h2>
           <p className="mt-6 max-w-3xl text-muted-foreground">
             Cinq familles de services, du socle de données aux outils sur mesure.
-            Chaque étage s&apos;appuie sur le précédent.
           </p>
         </Reveal>
 
