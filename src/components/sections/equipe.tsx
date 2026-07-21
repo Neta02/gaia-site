@@ -64,7 +64,7 @@ export function Equipe() {
             id="equipe-title"
             className="font-display text-3xl font-semibold tracking-tight sm:text-4xl"
           >
-            Quatre fondateurs, une méthode.
+            Qui sommes-nous ?
           </h2>
         </Reveal>
 
