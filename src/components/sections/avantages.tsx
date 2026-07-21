@@ -9,21 +9,21 @@ import { Reveal, Stagger, StaggerItem } from "@/components/motion/reveal";
 const cards = [
   {
     title: "Une méthode pensée pour l'adoption réelle de l'IA en entreprise",
-    body: "GAIA accompagne de l'acculturation à l'adoption concrète : formation des dirigeants et des équipes, ateliers métiers pour identifier les vrais cas d'usage, agents sur mesure intégrés aux processus. Chaque étape prépare la suivante : on ne déploie un outil que lorsque les équipes sont prêtes à s'en servir, sur un besoin qu'elles ont elles-mêmes identifié.",
+    body: "GAIA accompagne de l'acculturation à l'adoption réelle : formation des dirigeants et des équipes, ateliers métiers pour identifier les vrais cas d'usage, agents sur mesure intégrés à vos process.",
     resultat:
-      "une adoption durable et mesurable, ancrée dans les pratiques métiers. Une transformation réelle, pas un pilote abandonné au bout de trois mois.",
+      "une adoption durable et mesurable, ancrée dans les pratiques métiers et une transformation réelle, boostée à l'IA.",
   },
   {
-    title: "Le plus haut niveau d'expertise IA, rendu accessible aux équipes",
-    body: "Une équipe issue des meilleures grandes écoles françaises, qui traduit des sujets techniques complexes en usages immédiatement actionnables, au rythme de vos équipes et dans le vocabulaire de vos métiers. Nous suivons l'état de l'art en continu, testons les modèles et les outils dès leur sortie, et n'apportons en entreprise que ce qui a fait ses preuves.",
+    title: "Le plus haut niveau d'expertise IA",
+    body: "Une équipe issue des meilleures grandes écoles françaises, en veille permanente sur l'état de l'art de l'IA. Nous testons les modèles et les outils dès leur sortie, et n'apportons en entreprise que ce qui a fait ses preuves : des usages immédiatement actionnables, à fort impact sur vos KPI.",
     resultat:
       "des formations exigeantes et accessibles, qui font durablement monter les équipes en compétence, du dirigeant au collaborateur.",
   },
   {
     title: "Une souveraineté totale sur vos données, vos outils et vos compétences",
-    body: "Vos données restent chez vous, le code développé vous appartient, et aucune dépendance ne se crée envers un éditeur, une plateforme ou des licences revendues. Vos équipes sont formées à utiliser et à faire vivre chaque outil en autonomie, y compris sans nous : la montée en compétence fait partie du livrable, pas des options.",
+    body: "Vos données restent chez vous, le code développé vous appartient, et aucune dépendance ne se crée envers un éditeur, une plateforme ou des licences revendues. Vos équipes sont formées à utiliser et à faire vivre chaque outil en autonomie.",
     resultat:
-      "pas d'abonnement captif, pas de boîte noire, des équipes qui gardent la main sur leur système et savent le faire évoluer.",
+      "pas d'abonnement qui vous garde captif et des équipes qui gardent la main sur leur système et savent le faire évoluer.",
   },
 ];
 

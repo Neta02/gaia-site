@@ -54,11 +54,6 @@ export function Reseaux() {
           >
             Suivez-nous sur les réseaux sociaux
           </h2>
-          <p className="mt-6 text-muted-foreground">
-            Nos analyses, nos coulisses et l&apos;actualité de l&apos;IA en
-            entreprise, au fil des semaines.
-          </p>
-
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             {reseaux.map(({ label, Icon }) => (
               <button

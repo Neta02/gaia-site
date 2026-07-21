@@ -7,7 +7,6 @@ import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
 import { Reveal } from "@/components/motion/reveal";
 
 // Envoi via FormSubmit (AJAX, sans backend) vers la boite GAIA.
@@ -153,16 +152,12 @@ export function Contact() {
                   <Label htmlFor="c-sujet">Sujet</Label>
                   <Input id="c-sujet" name="Sujet" />
                 </div>
-                <div className="grid gap-2 sm:col-span-2">
-                  <Label htmlFor="c-message">Votre message</Label>
-                  <Textarea id="c-message" name="Message" rows={4} />
-                </div>
               </div>
 
               <p className="mt-8 text-center font-semibold tracking-tight">
-                Notre équipe analyse vos enjeux métiers et vous propose des cas
-                d&apos;usage concrets pour intégrer l&apos;IA dans votre
-                entreprise.
+                Nos experts étudient vos priorités et vos processus, puis
+                identifient les applications d&apos;IA les plus pertinentes à
+                déployer dans votre activité.
               </p>
 
               <div className="mt-8 flex flex-col items-center">
