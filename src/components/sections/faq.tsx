@@ -8,40 +8,40 @@ import { Reveal } from "@/components/motion/reveal";
 
 const faq: { q: string; r: string }[] = [
   {
-    q: "Pourquoi normaliser avant d'automatiser ?",
-    r: "Parce qu'un processus flou, automatisé, produit les mêmes erreurs, simplement plus vite. La normalisation le rend explicite, mesurable et stable : c'est ce qui rend son automatisation fiable et durable.",
+    q: "C'est quoi, un agent IA ?",
+    r: "C'est un programme qui exécute une tâche à votre place, de bout en bout. Selon les cas, il lit les mails entrants et prépare les réponses, il saisit les factures fournisseurs dans votre comptabilité, ou il relance les clients au bon moment. Vos équipes gardent la main sur ce qu'il produit.",
   },
   {
-    q: "Combien de temps avant un premier résultat ?",
-    r: "Six semaines entre le début de l'audit et le premier agent en production, avec des livrables à chaque étape. Pourquoi pas deux ? Parce que les premières semaines servent à normaliser vos processus. Automatiser un processus flou en quinze jours, c'est possible, mais le résultat ne tient pas dans le temps.",
-  },
-  {
-    q: "Nos processus sont très spécifiques. Est-ce vraiment adapté ?",
-    r: "C'est précisément notre parti pris : un outil personnalisé vaut mieux qu'un outil générique. Nous partons de vos processus réels, jamais d'un template.",
-  },
-  {
-    q: "Pourquoi écrire du code plutôt qu'utiliser du no-code ?",
-    r: "Les plateformes no-code sont d'excellents outils d'exploration. Pour un outil que vous utiliserez tous les jours, qui doit durer et rester le vôtre, nous écrivons du code : il vous appartient, il est documenté, et il ne dépend pas de l'abonnement d'un tiers.",
-  },
-  {
-    q: "Que possédons-nous à la fin de la mission ?",
-    r: "Le code, la documentation, et des processus normalisés. Tout ce que nous construisons pendant la mission vous est remis.",
-  },
-  {
-    q: "Faut-il changer tous nos outils pour intégrer l'IA ?",
-    r: "Non. L'audit identifie les endroits où l'effort paie ; nous nous intégrons à l'existant et numérisons ce qui doit l'être, sans tout changer d'un coup.",
-  },
-  {
-    q: "Qu'en est-il de nos données ?",
-    r: "Vos données restent sous votre contrôle : les outils sont conçus pour vous appartenir et les accès sont maîtrisés. Les modalités exactes (hébergement, accès, périmètre) sont cadrées noir sur blanc dès l'audit.",
+    q: "Comment savoir s'il nous faut une formation ou du conseil ?",
+    r: "Cela dépend de votre besoin. Si l'enjeu est que vos équipes se servent mieux de l'IA dans leur travail de tous les jours, commencez par une formation. S'il s'agit d'automatiser un processus précis avec des agents, c'est une mission de conseil. Dans le doute, l'audit d'entrée sert à trancher.",
   },
   {
     q: "Nos équipes ne sont pas techniques. Vont-elles suivre ?",
-    r: "La formation n'est pas une option chez GAIA, c'est le cœur de la dernière étape de la méthode. L'objectif est votre autonomie : des équipes qui pilotent les outils au quotidien.",
+    r: "Oui, c'est le cœur de notre travail. Les formations partent des dossiers réels de vos équipes plutôt que d'exemples théoriques, et à chaque outil déployé, nous formons les personnes qui s'en serviront. L'objectif est que vos équipes pilotent leurs agents sans nous.",
   },
   {
-    q: "Comment démarre-t-on ?",
-    r: "Par l'audit. Nous qualifions ensemble les problématiques à plus fort enjeu, nous cadrons, puis la mission démarre. Le premier audit dure deux heures et il est gratuit. Réservez un créneau.",
+    q: "Faut-il changer nos logiciels ?",
+    r: "Non. Nos agents se branchent sur vos logiciels existants : ERP, CRM, ou simplement vos fichiers.",
+  },
+  {
+    q: "Où vont nos données ?",
+    r: "Elles restent chez vous. Dès l'audit, nous cadrons noir sur blanc les accès et ce que l'agent a le droit de lire, et nos agents sont conformes au RGPD.",
+  },
+  {
+    q: "Combien de temps avant de voir des résultats ?",
+    r: "Après une formation, vos équipes appliquent dès le lendemain ce qu'elles ont appris. Pour les agents, comptez quelques semaines avant la mise en service. Ensuite, nous mesurons ce qu'ils vous font gagner, en continu et en chiffres.",
+  },
+  {
+    q: "Combien ça coûte ?",
+    r: "Chaque mission est chiffrée après l'audit, selon le périmètre et le nombre de jours d'intervention. Le devis est établi avant de commencer, et l'audit d'entrée est offert.",
+  },
+  {
+    q: "Si nous arrêtons, qu'est-ce que nous gardons ?",
+    r: "Tout reste chez vous. Le code développé pour vous vous appartient, avec sa documentation. Et comme vos équipes ont été formées, elles peuvent faire tourner les outils sans nous.",
+  },
+  {
+    q: "Par où commence-t-on ?",
+    r: "Par un audit de deux heures, que nous offrons. Nous passons en revue vos processus, vos outils et vos priorités, puis nous vous remettons une liste de cas concrets, classés par impact. Vous décidez ensuite, avec ou sans nous.",
   },
 ];
 
